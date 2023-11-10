@@ -15,15 +15,6 @@ const Ranking = () => {
                     <Text style={styles.subtitle}>Bem-vindo ao nosso ranking! Estamos entusiasmados por você se juntar à nossa comunidade.</Text>
                 </View>
                 <PlacingR />
-                <PlacingR />
-                <PlacingR />
-                <PlacingR />
-                <PlacingR />
-                <PlacingR />
-                <PlacingR />
-                <PlacingR />
-                <PlacingR />
-                <PlacingR />
             </View>
     );
 }

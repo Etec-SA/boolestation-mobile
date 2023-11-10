@@ -45,7 +45,7 @@ export const Routes = () => {
 
             <Tab.Screen name='Ranking' component={Ranking} options={{
                 headerShown: false,
-                tabBarIcon: ({ focused, size, color }) => (
+                tabBarIcon: ({ size, color }) => (
                     <View>
                         <Ionicons name='trophy' size={size} color={color}></Ionicons> 
                     </View>
@@ -56,7 +56,7 @@ export const Routes = () => {
 
             <Tab.Screen name='Profile' component={Profile} options={{
                 headerShown: false,
-                tabBarIcon: ({ focused, size, color }) => (
+                tabBarIcon: ({ size, color }) => (
                     <View>
                         <Ionicons name='person' size={size} color={color}></Ionicons> 
                     </View>
@@ -66,7 +66,7 @@ export const Routes = () => {
 
             <Tab.Screen name='Notifications' component={LoginForm} options={{
                 headerShown: false,
-                tabBarIcon: ({ focused, size, color }) => (
+                tabBarIcon: ({ size, color }) => (
                     <View>
                         <Ionicons name='notifications' size={size} color={color}></Ionicons> 
                     </View>
