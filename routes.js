@@ -24,17 +24,7 @@ export const Routes = () => {
             }
         }}>
             <Tab.Screen name='Home' component={Home} options={{
-                headerTitle: 'Boolestation',
-                headerTitleStyle:{
-                    fontWeight: 'bold',
-                    color: '#f0f0f0',
-                    fontSize: 24
-                },
-                headerStyle:{
-                    backgroundColor: '#141415',
-                    height: 100,
-                    borderBottomWidth: 0,
-                },
+                headerShown: false,
                 tabBarIcon: ({ size, color }) => (
                     <View>
                         <Ionicons name='home' size={size} color={color}></Ionicons> 

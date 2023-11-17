@@ -10,28 +10,20 @@ NativeWindStyleSheet.setOutput({
 const Profile = () => {
     return(
         <View style={styles.container}>
-            <View className="flex w-full justify-center items-center flex-col mt-10" id="userPhoto">
-                <View>
-                    <View className="w-[150px] h-[150px] bg-white rounded-full"></View>
-                </View>
-                <View style={styles.boxName}>
-                    <Text className="text-white text-lg my-6">Gabriel Gamon</Text>
-                    <Ionicons name='checkmark-circle' size={20} color={'#f0f0f0'}></Ionicons>
-                </View>
-            </View>
-
-            <View className="flex w-full justify-center items-center flex-col">
-                <View style={styles.boxAtribute}>
-                    <Text className="text-white">Estudante Proposicional</Text>
-                    <Text className="text-white">200</Text>
+            <View style={styles.photoBox}>
+                <View></View>
+                <View style={styles.atribute}>
+                    <Text style={styles.tilte}>pucaloe</Text>
+                    <Text style={styles.secTitle}>Luca Poe</Text>
+                    <Text style={styles.secTitle}>O Aprendiz</Text>
                 </View>
             </View>
 
-{/*            <View className="flex w-full justify-center items-center flex-col">
-                <TouchableOpacity style={styles.btn}>
-                    <Text style={styles.btnText}>Editar Perfil</Text>
-                </TouchableOpacity>
-            </View> */}
+            <View style={styles.dataBox}>
+                <View style={styles.points}>
+                    <Text style={styles.tit}>100</Text>
+                </View>
+            </View>
         </View>
     );
 }
@@ -44,42 +36,27 @@ const styles = StyleSheet.create({
         backgroundColor: '#141415',
         paddingHorizontal: 18
     },
-    title:{
-        color: '#f0f0f0'
+    photoBox:{
+
     },
-    boxName:{
-        justifyContent: 'center',
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 10,
-        width: '100%'
+    tilte:{
+
     },
-    boxAtribute:{
-        width: '100%',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        alignItems: 'center',
-        paddingVertical: 10, 
-        gap: 10
+    secTitle:{
+
     },
-    btn:{
-        width: '95%',
-        height: 34,
-        backgroundColor: '#1ED616',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 30,
-        borderRadius: 8,
-        padding: 14,
-        shadowColor: "#1ED616", // Cor da sombra
-        shadowOffset: { width: 0, height: 5 }, // Deslocamento da sombra (x, y)
-        shadowOpacity: 0.5, // Opacidade da sombra
-        shadowRadius: 3, // Raio da sombra
+    atribute:{
+
     },
-    btnText:{
-        color: '#f0f0f0',
-        fontSize: 16,
-    }
+    dataBox:{
+
+    },
+    points:{
+
+    },
+    tit:{
+
+    },
 })
 
 export default Profile;

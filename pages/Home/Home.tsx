@@ -10,6 +10,13 @@ NativeWindStyleSheet.setOutput({
 const Home = () => {
     return(
         <View style={styles.container}>
+            <View style={styles.header}>
+                <Text style={styles.title}>BooleStation</Text>
+                <Text style={styles.subtitle}></Text>
+            </View>
+
+            <View></View>
+            <ExBox />
             <ExBox />
             <ExBox />
         </View>
@@ -25,7 +32,23 @@ const styles = StyleSheet.create({
         paddingHorizontal: 18
     },
     title:{
-        color: '#f0f0f0'
+        color: '#f0f0f0',
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 8,
+    },
+    header:{
+        marginTop: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 120,
+        width: '100%'
+    },
+    subtitle:{
+        textAlign: 'justify',
+        color: '#f0f0f0',
+        fontSize: 15,
+        fontStyle: 'italic'
     }
 })
 

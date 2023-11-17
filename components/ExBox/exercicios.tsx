@@ -8,16 +8,15 @@ NativeWindStyleSheet.setOutput({
 
 const ExBox = () => {
     return(
-        <View className="flex-row-reverse w-full p-4 rounded-3xl my-4 bg-[#28282B]">
-            <View className="w-3/4">
-                <View className="p-2">
-                    <Text className="text-xl font-bold text-gray-200">Lógica Aristotélica</Text>
-                </View>
-                <View className="p-2">
-                    <Text className="italic text-gray-200 text-justify">Módulo onde aprenderemos sobre teoria dos silogismos</Text>
-                </View>
+        <View className="bg-[#28282B] p-4 rounded-md my-4 w-full">
+            <View className="p-4">
+                <Text className="text-xl font-bold text-gray-200">Lógica Aristotélica</Text>
+                <Text className="italic text-gray-200">25 questions</Text>
             </View>
-            <View className="p-2 flex justify-between items-center gap-4">
+            <View className="p-4">
+                <Text className="italic text-gray-200 text-justify">Módulo onde aprenderemos sobre teoria dos silogismos</Text>
+            </View>
+            <View className="p-4 flex justify-between items-center gap-4">
                 <TouchableOpacity style={styles.btnStart}><Text style={styles.btnText}>Iniciar</Text></TouchableOpacity>
             </View>
         </View>
