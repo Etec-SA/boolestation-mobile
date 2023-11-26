@@ -4,7 +4,6 @@ import { Ionicons } from '@expo/vector-icons'
 import Home from './pages/Home/Home'
 import Profile from './pages/Profile/Profile'
 import Ranking from './pages/Ranking/Ranking'
-import LoginForm from './pages/Forms/LoginForm'
 
 const Tab = createBottomTabNavigator();
 
@@ -52,17 +51,7 @@ export const Routes = () => {
                     </View>
                     )
                 }}
-            />
-
-            <Tab.Screen name='Notifications' component={LoginForm} options={{
-                headerShown: false,
-                tabBarIcon: ({ size, color }) => (
-                    <View>
-                        <Ionicons name='notifications' size={size} color={color}></Ionicons> 
-                    </View>
-                )
-            }}
-            />            
+            />          
         </Tab.Navigator>
     );
 }

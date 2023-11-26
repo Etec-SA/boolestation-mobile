@@ -14,11 +14,13 @@ const Home = () => {
                 <Text style={styles.title}>BooleStation</Text>
                 <Text style={styles.subtitle}></Text>
             </View>
-
-            <View></View>
-            <ExBox />
-            <ExBox />
-            <ExBox />
+            
+            <View style={styles.boxEx}>
+                <Text style={styles.titleModel}>Módulos</Text>       
+                <ExBox />
+                <ExBox />
+                <ExBox />
+            </View>
         </View>
     );
 }
@@ -37,6 +39,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 8,
     },
+    titleModel:{
+        color: '#f0f0f0',
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 8,
+        marginLeft: 16
+    },
     header:{
         marginTop: 20,
         justifyContent: 'center',
@@ -49,7 +58,13 @@ const styles = StyleSheet.create({
         color: '#f0f0f0',
         fontSize: 15,
         fontStyle: 'italic'
-    }
+    },
+    boxEx:{
+        width: '100%',
+    },
+    boxInfo:{
+
+    },
 })
 
 export default Home;
