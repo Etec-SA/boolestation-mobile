@@ -20,7 +20,7 @@ const Exercise = (props: {statement: IStatement, alternatives: IAlternative[]})=
                             isDisabled={isDisabled}
                             onPress={()=>{ 
                                     setIsDisabled(true);
-                                    alternative.background = alternative.isCorrect ? "green" : "red";
+                                    alternative.background = alternative.isCorrect ? "#165724" : "#942e30";
                                 }
                             }
                         />

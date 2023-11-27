@@ -3,8 +3,7 @@ import { TouchableOpacity, Text, View } from "react-native";
 import { IAlternative } from "../types";
 
 const Alternative = ({ isDisabled, title, onPress, background }: IAlternative) => {
-  let buttonClass = `flex justify-center items-center w-[80vw] h-10 rounded-xl 
-  shadow-inner border-2 border-b-4 border-slate-300 `;
+  let buttonClass = `flex justify-center items-center shadow-md w-[95%] h-12 bg-[#28282B] p-4 rounded-md text-[#f0f0f0]`;
 
   return (
     <>
@@ -18,7 +17,7 @@ const Alternative = ({ isDisabled, title, onPress, background }: IAlternative) =
           style={{backgroundColor: background}}
           disabled={ isDisabled }
         >
-          <Text className="text-black text-md text-center">{title}</Text>
+          <Text className="text-[#f0f0f0] text-md text-center">{title}</Text>
         </TouchableOpacity>
       </View>
     </>

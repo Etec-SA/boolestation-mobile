@@ -8,19 +8,19 @@ NativeWindStyleSheet.setOutput({
 
 export default function App() {
   return (
-    <View className='flex justify-center items-center w-screen h-screen bg-black'>
+    <View className='flex justify-center items-center w-full h-full bg-[#141415]'>
       <Exercise 
           statement={
             {
-              title: 'Exercício 1', 
-              description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum modi amet reprehenderit quas sint, iure asperiores totam delectus nobis debitis obcaecati numquam maiores doloremque quis officia harum voluptatibus odit eum.',
+              title: 'Equivalência da Implicação', 
+              description: 'Quais das seguintes fórmulas é equivalente a uma implicação?',
             }
           }
           alternatives={[
-            {title: 'Alternativa 1'},
-            {title: 'Alternativa 2'},
-            {title: 'Alternativa 3', isCorrect: true},
-            {title: 'Alternativa 4'}
+            {title: '¬¬(A ^ ¬¬A)'},
+            {title: 'A ^ A'},
+            {title: '¬P v Q', isCorrect: true},
+            {title: 'A ^ ¬A'}
           ]}
         />
     </View>
