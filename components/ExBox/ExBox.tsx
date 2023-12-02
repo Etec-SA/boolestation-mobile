@@ -9,52 +9,23 @@ NativeWindStyleSheet.setOutput({
 
 const ExBox = () => {
     return(
-        <View className="flex-row-reverse justify-between w-full p-4 rounded-3xl my-4 bg-[#28282B]">
+        <View className="flex-row-reverse justify-between w-full p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
             <View className="w-3/4 pl-1">
                 <View className="p-2">
-                    <Text className="text-xl font-bold text-gray-200">Lógica Aristotélica</Text>
+                    <Text className="text-lg font-bold text-[#28282B]">Lógica Aristotélica</Text>
                 </View>
                 <View className="p-2">
-                    <Text className="italic text-gray-200 text-justify">Módulo onde aprenderemos sobre teoria dos silogismos</Text>
+                    <Text className="text-gray-500 text-left font-medium">Módulo onde aprenderemos sobre teoria dos silogismos</Text>
                 </View>
             </View>
 
-            <View className="w-1/4" style={styles.btnBox}>
-                <TouchableOpacity style={styles.btnStart}>
+            <View className=" flex items-center justify-center w-1/4">
+                <TouchableOpacity className="flex items-center justify-center bg-[#1ED616] w-16 h-16 rounded-full">
                     <Ionicons name='play-circle-outline' size={30} color={'#f0f0f0'}></Ionicons> 
-                    <Text style={styles.btnText}>Iniciar</Text>
                 </TouchableOpacity>
             </View>
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    btnStart:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#1ED616',
-        width: 70,
-        height: 70,        
-        borderRadius: 100
-    },
-    btnText:{
-        color: '#f0f0f0',
-        fontSize: 12,
-    },
-    btnLike:{
-        backgroundColor: '#d70b19',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '20%',        
-        borderRadius: 8,
-        padding: 4,
-        height: 30
-    },
-    btnBox:{
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-});
 
 export default ExBox;

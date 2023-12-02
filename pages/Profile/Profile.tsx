@@ -19,7 +19,7 @@ const Profile = () => {
                     <Text style={styles.tilte}>Luca Poe</Text>
                     <Text style={styles.secTitle}>pucaloe</Text>
                 </View>
-                <View style={styles.dataBox}>
+                <View className="shadow-md" style={styles.dataBox}>
                   <View className="rounded-full" style={styles.points}>
                       <Text style={styles.tit}>200</Text>
                   </View>                  
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: '#141415'
+        backgroundColor: '#f0f0f0'
     },
     photoBox:{
       justifyContent: 'flex-start',
@@ -50,6 +50,10 @@ const styles = StyleSheet.create({
       borderBottomRightRadius: 40,
       borderBottomLeftRadius: 40,
       gap: 20,
+      shadowColor: "#000", 
+      shadowOffset: { width: 0, height: 4 }, 
+      shadowOpacity: 0.1, 
+      shadowRadius: 3, 
     },
     tilte:{
       fontSize: 24,
@@ -72,7 +76,7 @@ const styles = StyleSheet.create({
     dataBox:{
       justifyContent: "center",
       alignItems: 'center',
-      backgroundColor: '#f0f0f0',
+      backgroundColor: '#fff',
       width: '80%',
       height: 200,
       position: "absolute",
@@ -80,10 +84,6 @@ const styles = StyleSheet.create({
       borderRadius: 30,
       gap: 20,
       padding: 10,
-      shadowColor: "#f0f0f0", 
-      shadowOffset: { width: 0, height: 8 }, 
-      shadowOpacity: 0.1, 
-      shadowRadius: 3, 
     },
     points:{
       justifyContent: 'center',
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
       width: 90,
       height: 90,
       borderWidth: 3,
-      borderColor: '#28282B'
+      borderColor: '#1ED616'
     },
     perfilT:{
       fontSize: 18,
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     tit:{
-      color: '#28282B',
+      color: '#1ED616',
       fontWeight: '600',
       fontSize: 30
     },

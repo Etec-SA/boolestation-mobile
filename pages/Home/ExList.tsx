@@ -9,16 +9,12 @@ NativeWindStyleSheet.setOutput({
 
 const ExList = () => {
     return(
-        <View className="flex-1 justify-start items-center bg-[#141415] px-4">
+        <View className="flex-1 justify-start items-center bg-[#f0f0f0] px-4">
             <View className="p-4 flex-row justify-between items-center w-full h-16 mb-4">                    
-                <Text className="text-white text-lg">Silogismos</Text>
+                <Text className="text-[#28282B] text-lg">Lógica Aristotélica</Text>
                 <TouchableOpacity style={styles.btnExit}>
-                    <Ionicons name='close' size={24} color={'#f0f0f0'}></Ionicons>
+                    <Ionicons name='close' size={24} color={'#28282B'}></Ionicons>
                 </TouchableOpacity>
-            </View>
-
-            <View className="p-4 bg-[#28282B] w-full mb-4 rounded shadow-md">
-                <Text className="text-white text-xl">Invalidade de Silogismos</Text>
             </View>
             
             <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#165724] rounded shadow-md">
@@ -30,6 +26,26 @@ const ExList = () => {
                 <Text className="text-[#f8d7da] text-xl">Valorização de Silogismos</Text>
                 <Ionicons name="close-outline" size={24} color={'#f8d7da'}></Ionicons>
             </View>
+
+            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
+                <Text className="text-[#28282B] text-xl">Equivalência da Implicação</Text>
+            </View>
+
+            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
+                <Text className="text-[#28282B] text-xl">Falso Silogismo</Text>
+            </View>
+
+            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
+                <Text className="text-[#28282B] text-xl">Termos do Silogismo</Text>
+            </View>
+
+            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
+                <Text className="text-[#28282B] text-xl">Silogismo Jurídico</Text>
+            </View>
+
+            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
+                <Text className="text-[#28282B] text-xl">Tipos de Silogismo</Text>
+            </View>                        
         </View>
     )
 }

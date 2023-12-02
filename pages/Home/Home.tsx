@@ -9,14 +9,15 @@ NativeWindStyleSheet.setOutput({
 
 const Home = () => {
     return(
-        <View style={styles.container}>
-            <View style={styles.header}>
-                <Text style={styles.title}>BooleStation</Text>
-                <Text style={styles.subtitle}></Text>
+        <View className="flex-1 justify-start items-center bg-[#f0f0f0] px-4">
+            <View className="mt-8 flex justify-center items-center h-32 w-full">
+                <Image className="w-40 h-40" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',}} />
             </View>
             
-            <View style={styles.boxEx}>
-                <Text style={styles.titleModel}>Módulos</Text>       
+            <View className="w-full mt-2">
+                <Text className="text-gray-500 text-lg font-semibold mb-2 ml-4">Módulos</Text>       
+                <ExBox />
+                <ExBox />
                 <ExBox />
                 <ExBox />
                 <ExBox />
@@ -24,47 +25,5 @@ const Home = () => {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: "flex-start",
-        alignItems: 'center',
-        backgroundColor: '#141415',
-        paddingHorizontal: 18
-    },
-    title:{
-        color: '#f0f0f0',
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 8,
-    },
-    titleModel:{
-        color: '#f0f0f0',
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginBottom: 8,
-        marginLeft: 16
-    },
-    header:{
-        marginTop: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 120,
-        width: '100%'
-    },
-    subtitle:{
-        textAlign: 'justify',
-        color: '#f0f0f0',
-        fontSize: 15,
-        fontStyle: 'italic'
-    },
-    boxEx:{
-        width: '100%',
-    },
-    boxInfo:{
-
-    },
-})
 
 export default Home;

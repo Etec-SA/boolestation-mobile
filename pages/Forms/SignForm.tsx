@@ -15,118 +15,31 @@ const SignForm = () => {
     }
   
     return(
-        <View style={styles.container}>
+      <View className="flex-1 justify-center items-center bg-[#f0f0f0] px-4">
+        <Image className="w-60 h-60" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/VectorLogo.png',}} />
 
-        <Controller
-          control={control}
-          name="username"
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              style={styles.input}
-              onChangeText={onChange}
-              onBlur={onBlur}
-              value={value}
-              placeholder="Username"
-            />
+        <Controller control={control} name="username" render={({ field: { onChange, onBlur, value } }) => (
+            <TextInput className="shadow-md w-[95%] h-12 bg-[#fff] p-4 rounded-md text-gray-600" onChangeText={onChange} onBlur={onBlur} value={value} placeholder="Username" />
           )}
         />
 
-        <Controller
-          control={control}
-          name="email"
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              style={styles.input}
-              onChangeText={onChange}
-              onBlur={onBlur}
-              value={value}
-              placeholder="Email"
-            />
+        <Controller control={control} name="email" render={({ field: { onChange, onBlur, value } }) => (
+            <TextInput className="shadow-md w-[95%] h-12 bg-[#fff] p-4 mt-8 rounded-md text-gray-600" onChangeText={onChange} onBlur={onBlur} value={value} placeholder="Email" />
           )}
         />
 
-        <Controller
-          control={control}
-          name="password"
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              style={styles.input}
-              onChangeText={onChange}
-              onBlur={onBlur}
-              value={value}
-              placeholder="Password"
-            />
+        <Controller control={control} name="password" render={({ field: { onChange, onBlur, value } }) => (
+            <TextInput className="shadow-md w-[95%] h-12 bg-[#fff] p-4 mt-8 rounded-md text-gray-600" onChangeText={onChange} onBlur={onBlur} value={value} placeholder="Password" />
           )}
         />
 
-        <TouchableOpacity style={styles.button} onPress={handleSubmit(handleSignIn)}>
-            <Text style={styles.buttonText}>Cadastrar</Text>
+        <TouchableOpacity className="w-[95%] h-12 bg-[#1ED616] justify-center items-center mt-8 rounded-md p-4 shadow-md" onPress={handleSubmit(handleSignIn)}>
+            <Text className="text-[#f0f0f0] text-lg uppercase">Cadastrar</Text>
         </TouchableOpacity>
 
-        <Text style={styles.spanText}>Já possui uma conta? Entrar agora</Text>
-
-        </View>
+        <Text className="text-gray-600 mt-8 text-sm">Já possui uma conta? Entrar agora</Text>
+      </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#141415',
-        paddingHorizontal: 18
-    },
-    input:{
-        width: '95%',
-        height: 40,
-        backgroundColor: '#28282B',
-        padding: 14,
-        marginTop: 30,
-        borderRadius: 8,
-        color: '#F0F0F0',
-        shadowColor: "#28282B", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 3, 
-    },
-    button:{
-        width: '95%',
-        height: 40,
-        backgroundColor: '#1ED616',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 30,
-        borderRadius: 8,
-        padding: 14,
-        shadowColor: "#1ED616", // Cor da sombra
-        shadowOffset: { width: 0, height: 5 }, // Deslocamento da sombra (x, y)
-        shadowOpacity: 0.5, // Opacidade da sombra
-        shadowRadius: 3, // Raio da sombra
-    },
-    buttonText:{
-        color: '#f0f0f0',
-        fontSize: 16,
-        textTransform: "uppercase"
-    },
-    labelError:{
-        alignSelf: "flex-start",
-        color: '#ff375b',
-        marginBottom: 8
-    },
-    spanText:{
-      marginTop: 20,
-      color: '#f0f0f0',
-      fontSize: 14
-    },
-    passForget:{
-      color: '#f0f0f0',
-      textAlign: "right",
-      width: '95%',
-      paddingTop: 8,
-      textDecorationLine: 'underline',
-      fontSize: 14
-    }
-})
 
 export default SignForm;

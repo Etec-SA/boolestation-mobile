@@ -1,120 +1,58 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
 import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup';
 import { NativeWindStyleSheet } from "nativewind";
 
 NativeWindStyleSheet.setOutput({
   default: "native",
 });
 
-const LoginForm = () => {
-    const { control, handleSubmit, formState: { errors } } = useForm({})
-
-    function handleSignIn() {  //data
-        console.log();  //data
-    }
-  
-    return(
-        <View style={styles.container}>
-
-        <Controller
-          control={control}
-          name="username"
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              style={styles.input}
-              onChangeText={onChange}
-              onBlur={onBlur}
-              value={value}
-              placeholder="Username"
-            />
-          )}
-        />
-
-        <Controller
-          control={control}
-          name="password"
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              style={styles.input}
-              onChangeText={onChange}
-              onBlur={onBlur}
-              value={value}
-              placeholder="Password"
-            />
-          )}
-        />
-
-        <Text style={styles.passForget}>Esqueceu a senha?</Text>
-
-        <TouchableOpacity style={styles.button} onPress={handleSubmit(handleSignIn)}>
-            <Text style={styles.buttonText}>Entrar!</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.spanText}>Não possui conta? Crie agora</Text>
-
-        </View>
-    );
+type FormData = {
+  username: string;
+  password: string;
 }
 
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#141415',
-        paddingHorizontal: 18
-    },
-    input:{
-        width: '95%',
-        height: 40,
-        backgroundColor: '#28282B',
-        padding: 14,
-        marginTop: 30,
-        borderRadius: 8,
-        color: '#F0F0F0',
-        shadowColor: "#28282B", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 3, 
-    },
-    button:{
-        width: '95%',
-        height: 40,
-        backgroundColor: '#1ED616',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 30,
-        borderRadius: 8,
-        padding: 14,
-        shadowColor: "#1ED616", // Cor da sombra
-        shadowOffset: { width: 0, height: 5 }, // Deslocamento da sombra (x, y)
-        shadowOpacity: 0.5, // Opacidade da sombra
-        shadowRadius: 3, // Raio da sombra
-    },
-    buttonText:{
-        color: '#f0f0f0',
-        fontSize: 16,
-        textTransform: "uppercase"
-    },
-    labelError:{
-        alignSelf: "flex-start",
-        color: '#ff375b',
-        marginBottom: 8
-    },
-    spanText:{
-      marginTop: 20,
-      color: '#f0f0f0',
-      fontSize: 14
-    },
-    passForget:{
-      color: '#f0f0f0',
-      textAlign: "right",
-      width: '95%',
-      paddingTop: 8,
-      textDecorationLine: 'underline',
-      fontSize: 14
-    }
+const schema = yup.object({
+  username: yup.string().required("Insira seu nome"),
+  password: yup.string().required("Insira sua senha")
 })
+
+const LoginForm = () => {
+    const { control, handleSubmit, formState: { errors } } = useForm<FormData>({
+      resolver: yupResolver(schema)
+    })
+
+    const handleSignIn = (data: FormData) => console.log(data);
+  
+    return(
+      <View className="flex-1 justify-center items-center bg-[#f0f0f0] px-4">
+        <Image className="w-60 h-60" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',}} />
+
+        <Controller control={control} name="username" render={({ field: { onChange, onBlur, value } }) => (
+            <TextInput className="shadow-md w-[95%] h-12 bg-[#fff] p-4 rounded-md text-gray-600" style={{borderWidth: errors.username && 2, borderColor: errors.username && '#d10d18'}} onChangeText={onChange} onBlur={onBlur} value={value} placeholder="Nome de Usuário" />
+          )}
+        />
+
+        {errors.username && <Text className="w-[95%] text-[#d10d18] text-sm font-normal pt-2">{errors.username?.message}</Text>}
+
+        <Controller control={control} name="password" render={({ field: { onChange, onBlur, value } }) => (
+            <TextInput className="shadow-md w-[95%] h-12 bg-[#fff] p-4 mt-8 rounded-md text-gray-600" style={{borderWidth: errors.password && 2, borderColor: errors.password && '#d10d18'}} onChangeText={onChange} onBlur={onBlur} value={value} placeholder="Senha" secureTextEntry />
+          )}
+        />
+
+        {errors.password && <Text className="w-[95%] pt-2 text-[#d10d18] text-sm font-normal">{errors.password?.message}</Text>}
+        <Text className="text-gray-600 text-right underline text-sm w-[95%] pt-2">Esqueceu a senha?</Text>
+
+        <TouchableOpacity className="w-[95%] h-12 bg-[#1ED616] justify-center items-center mt-4 rounded-md p-4 shadow-md" onPress={handleSubmit(handleSignIn)}>
+            <Text className="text-[#f0f0f0] text-lg uppercase">Entrar!</Text>
+        </TouchableOpacity>
+
+        <Text className="text-gray-600 mt-8 text-sm">Não possui conta? Crie agora</Text>
+
+      </View>
+    );
+}
 
 export default LoginForm;

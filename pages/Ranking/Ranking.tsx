@@ -10,30 +10,83 @@ NativeWindStyleSheet.setOutput({
 
 const Ranking = () => {
     return(
-            <View style={styles.container}>
+            <View className="flex-1 justify-start items-center bg-gray-100 px-4">
                 <View style={styles.header}>
-                    <Text style={styles.title}>Ranking Geral</Text>
-                    <Text style={styles.subtitle}>Bem-vindo ao nosso ranking! Estamos entusiasmados por você se juntar à nossa comunidade.</Text>
+                    <Text className="text-xl mb-2 font-bold text-[#28282B]">Ranking Geral</Text>
+                    <Text className="text-gray-500 text-left font-medium">Bem-vindo ao nosso ranking! Estamos entusiasmados por você se juntar à nossa comunidade.</Text>
                 </View>
+
                 <PlacingR />
+                
+                <View className="bg-white flex justify-between items-center flex-row w-full h-16 mt-5 rounded-2xl px-4 shadow-md">
+                    <View className="w-1/10 p-2">
+                        <Text className="text-[#C0C0C0] font-bold text-lg">2</Text>
+                    </View>
+                    <View className="w-3/5 p-2">
+                        <Text className="text-[#C0C0C0] font-bold text-lg">Luca Poe</Text>
+                    </View>
+                    <View className="w-1/4 flex justify-center items-center flex-row gap-2 p-2">
+                        <Ionicons name='trophy' size={30} color={'#C0C0C0'} />
+                        <Text className="text-[#C0C0C0] font-bold text-lg">500</Text>
+                    </View>
+                </View>
+
+                <View className="bg-white flex justify-between items-center flex-row w-full h-16 mt-5 rounded-2xl px-4 shadow-md">
+                    <View className="w-1/10 p-2">
+                        <Text className="text-[#CD7F32] font-bold text-lg">3</Text>
+                    </View>
+                    <View className="w-3/5 p-2">
+                        <Text className="text-[#CD7F32] font-bold text-lg">Eduardo Yasui</Text>
+                    </View>
+                    <View className="w-1/4 flex justify-center items-center flex-row gap-2 p-2">
+                        <Ionicons name='trophy' size={30} color={'#CD7F32'} />
+                        <Text className="text-[#CD7F32] font-bold text-lg">400</Text>
+                    </View>
+                </View>
+
+                <View className="bg-white flex justify-between items-center flex-row w-full h-16 mt-5 rounded-2xl px-4 shadow-md">
+                    <View className="w-1/10 p-2">
+                        <Text className="text-gray-500 font-bold text-lg">4</Text>
+                    </View>
+                    <View className="w-3/5 p-2">
+                        <Text className="text-gray-500 font-bold text-lg">Gabriel Gamon</Text>
+                    </View>
+                    <View className="w-1/4 flex justify-center items-center flex-row gap-2 p-2">
+                        <Ionicons name='trophy' size={30} color={'gray'} />
+                        <Text className="text-gray-500 font-bold text-lg">300</Text>
+                    </View>
+                </View>
+
+                <View className="bg-white flex justify-between items-center flex-row w-full h-16 mt-5 rounded-2xl px-4 shadow-md">
+                    <View className="w-1/10 p-2">
+                        <Text className="text-gray-500 font-bold text-lg">5</Text>
+                    </View>
+                    <View className="w-3/5 p-2">
+                        <Text className="text-gray-500 font-bold text-lg">Pedro Vitor</Text>
+                    </View>
+                    <View className="w-1/4 flex justify-center items-center flex-row gap-2 p-2">
+                        <Ionicons name='trophy' size={30} color={'gray'} />
+                        <Text className="text-gray-500 font-bold text-lg">290</Text>
+                    </View>
+                </View> 
+
+                <View className="bg-white flex justify-between items-center flex-row w-full h-16 mt-5 rounded-2xl px-4 shadow-md">
+                    <View className="w-1/10 p-2">
+                        <Text className="text-gray-500 font-bold text-lg">6</Text>
+                    </View>
+                    <View className="w-3/5 p-2">
+                        <Text className="text-gray-500 font-bold text-lg">Kayk Santos</Text>
+                    </View>
+                    <View className="w-1/4 flex justify-center items-center flex-row gap-2 p-2">
+                        <Ionicons name='trophy' size={30} color={'gray'} />
+                        <Text className="text-gray-500 font-bold text-lg">100</Text>
+                    </View>
+                </View>                                
             </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: "flex-start",
-        alignItems: 'center',
-        backgroundColor: '#141415',
-        paddingHorizontal: 18
-    },
-    title:{
-        color: '#ff375b',
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 8
-    },
     header:{
         marginTop: 20,
         justifyContent: 'center',
@@ -41,59 +94,6 @@ const styles = StyleSheet.create({
         height: 120,
         width: '100%'
     },
-    subtitle:{
-        textAlign: 'justify',
-        color: '#f0f0f0',
-        fontSize: 15,
-        fontStyle: 'italic'
-    },
-
-    placing:{
-        backgroundColor: '#28282B',
-        justifyContent: 'space-between',
-        flexDirection: 'row',
-        alignItems: 'center',
-        width: '100%',
-        height: 60,
-        marginTop: 20,
-        borderRadius: 8,
-        paddingHorizontal: 10,
-        shadowColor: '#28282B', // Cor da sombra
-        shadowOffset: { width: 0, height: 5 }, // Deslocamento da sombra (x, y)
-        shadowOpacity: 0.5, // Opacidade da sombra
-        shadowRadius: 3, // Raio da sombra
-
-    },
-    primeiro:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '10%',
-        padding: 10
-    },
-    textOne:{
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#f0f0f0'
-    },
-    segundo:{
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        width: '60%',
-        padding: 10
-    },
-    terceiro:{
-        width: '25%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row',
-        gap: 4,
-        padding: 10
-    },
-    numero:{
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#f0f0f0'
-    }
 })
 
 export default Ranking;

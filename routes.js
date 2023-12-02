@@ -16,7 +16,7 @@ export const Routes = () => {
             tabBarStyle:{
                 borderTopWidth: 0,
                 elevation: 0,
-                backgroundColor: '#28282B',
+                backgroundColor: '#fff',
                 paddingTop: 10,
                 paddingBottom: 10,
                 height: 60
