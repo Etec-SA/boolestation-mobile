@@ -1,0 +1,50 @@
+[
+    {
+      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+      "title": "Lógica Aristotélica",
+      "slug": "logica-aristotelica",
+      "description": "Módulo onde aprenderemos sobre teoria dos silogismos",
+      "createdAt": "2023-02-02T00:00:00.000Z",
+      "updatedAt": "2023-02-02T00:00:00.000Z",
+      "lessons": [
+        {
+          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+          "title": "Silogismos",
+          "slug": "silogismos",
+          "content": "Exploraremos aqui os silogismos da lógica tradicional",
+          "createdAt": "2023-11-16T21:45:17.281Z"
+        },
+        {
+          "id": "7408cefc-d5b5-4b06-9d04-61c4b644a448",
+          "title": "Operadores - Negação",
+          "slug": "operadores-negacao",
+          "content": "Aprenderemos sobre o operador unário de negação, seu valor semântico e como ele se aplica na linguagem natural",
+          "createdAt": "2023-11-20T14:28:15.783Z"
+        },
+        {
+          "id": "36f00015-02c6-43c9-bfa1-0d4d9ecd5e5b",
+          "title": "Operadores - Negaçãoss",
+          "slug": "operadores-negacaoss",
+          "content": "Aprenderemos sobre o operador unário de negação, seu valor semântico e como ele se aplica na linguagem natural",
+          "createdAt": "2023-11-22T22:58:17.016Z"
+        }
+      ]
+    },
+    {
+      "id": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+      "title": "Lógica Proposicional",
+      "slug": "logica-proposicional",
+      "description": "Módulo onde aprenderemos sobre a lógica clássica criada por Frege.",
+      "createdAt": "2023-02-02T00:00:00.000Z",
+      "updatedAt": "2023-02-02T00:00:00.000Z",
+      "lessons": [
+        {
+          "id": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+          "title": "Operador de Implicação",
+          "slug": "operador-de-implicacao",
+          "content": "Exploraremos aqui a aplicação do operador de implicação",
+          "createdAt": "2023-11-16T21:45:17.281Z"
+        }
+      ]
+    }
+]

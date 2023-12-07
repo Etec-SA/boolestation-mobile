@@ -1,29 +1,62 @@
-import React from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
+import React, { useState, useEffect } from "react";
 import { NativeWindStyleSheet } from "nativewind";
-import ExBox from "../../components/ExBox/ExBox";
+import Modules from "./Modules";
+import Lessons from "./LessonList";
+import lessonsMock from './fixtures/lessons.json';
+import Exercises from "./ExerciseList";
+import Exercise from "../Exercise/Exercise";
 
 NativeWindStyleSheet.setOutput({
   default: "native",
 });
 
 const Home = () => {
-    return(
-        <View className="flex-1 justify-start items-center bg-[#f0f0f0] px-4">
-            <View className="mt-8 flex justify-center items-center h-32 w-full">
-                <Image className="w-40 h-40" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',}} />
-            </View>
-            
-            <View className="w-full mt-2">
-                <Text className="text-gray-500 text-lg font-semibold mb-2 ml-4">Módulos</Text>       
-                <ExBox />
-                <ExBox />
-                <ExBox />
-                <ExBox />
-                <ExBox />
-            </View>
-        </View>
-    );
-}
+  const [page, setPage] = useState<'Modules' | 'Lessons' | 'Exercises' | 'Exercise'>('Modules');
+  const [moduleId, setModuleId] = useState<string>('');
+  const [lessonId, setLessonId] = useState<string>('');
+  const [exerciseId, setExerciseId] = useState<string>('');
+  const [exercises, setExercises] = useState<any>([]);
+  const [exercise, setExercise] = useState<typeof lessonsMock[0]['exercises'][0]>();
+  const [lessons, setLessons] = useState<any[]>([]);
+
+  useEffect(() => {
+    const data = lessonsMock.filter(lesson => lesson.moduleId === moduleId);
+    setLessons(data);
+  }, [moduleId]);
+
+  useEffect(() => {
+    const data = lessonsMock.filter(lesson => lesson.id === lessonId);
+    setExercises(data[0]?.exercises || []);
+  }, [lessonId]);
+
+  useEffect(() => {
+    const data = lessonsMock[0]?.exercises.filter(exercise => exercise.id === exerciseId);
+    setExercise(data as any || [] as any);
+  }, [exerciseId]);
+
+  function handleModulesOnClick(id: string = '') {
+    setModuleId(id);
+    setPage('Lessons');
+  }
+
+  function handleLessonsOnClick(id: string = '') {
+    setLessonId(id);
+    setPage('Exercises');
+  }
+
+  function handleExercisesOnClick(id: string = '') {
+    setExerciseId(id);
+    setPage('Exercise');
+  }
+
+  return (
+    <>
+      {page === 'Modules' ? <Modules onClick={handleModulesOnClick} /> : null}
+      {page === 'Lessons' ? <Lessons data={lessons} onClick={handleLessonsOnClick}/> : null}
+      {page === 'Exercises' ? <Exercises data={exercises} onClick={handleExercisesOnClick} /> : null}
+      {page === 'Exercise' ? <Exercise alternatives={[{title: 'a', onPress: ()=>{}, isDisabled: false}]} statement={{title: 'M-Sync', description: exercise?.description as any}} /> : null}
+    </>
+  );
+};
 
 export default Home;

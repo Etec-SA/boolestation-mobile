@@ -1,3 +1,5 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 export interface IStatement{
     title: string;
     description: string;
@@ -10,3 +12,5 @@ export interface IAlternative{
     isDisabled: boolean;
     background?: string;
 }
+
+export type IconName = typeof MaterialCommunityIcons['name'];

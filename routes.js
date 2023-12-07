@@ -1,9 +1,11 @@
 import { View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Ionicons } from '@expo/vector-icons'
-import Home from './pages/Home/Home'
+import Modules from './pages/Home/Modules'
+import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile'
 import Ranking from './pages/Ranking/Ranking'
+import SignForm from './pages/Forms/SignForm'
 
 const Tab = createBottomTabNavigator();
 
@@ -43,7 +45,7 @@ export const Routes = () => {
             
             />
 
-            <Tab.Screen name='Profile' component={Profile} options={{
+            <Tab.Screen name='SignForm' component={SignForm} options={{
                 headerShown: false,
                 tabBarIcon: ({ size, color }) => (
                     <View>

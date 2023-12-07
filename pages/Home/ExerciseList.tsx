@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
 import { Ionicons } from '@expo/vector-icons'
 import { NativeWindStyleSheet } from "nativewind";
+import lessonsMock from './fixtures/lessons.json';
 
 NativeWindStyleSheet.setOutput({
     default: "native",
   });
 
-const ExList = () => {
+const Exercises = ({data, onClick}: {data: typeof lessonsMock[0]['exercises'], onClick: any}) => {
     return(
-        <View className="flex-1 justify-start items-center bg-[#f0f0f0] px-4">
-            <View className="p-4 flex-row justify-between items-center w-full h-16 mb-4">                    
-                <Text className="text-[#28282B] text-lg">Lógica Aristotélica</Text>
-                <TouchableOpacity style={styles.btnExit}>
-                    <Ionicons name='close' size={24} color={'#28282B'}></Ionicons>
-                </TouchableOpacity>
-            </View>
-            
+        <View className="flex-1 justify-center items-center bg-[#f0f0f0] px-4 h-96">
+          {
+            data.map((exercise)=>{
+              return (
+                <View className="p-4 flex-row justify-between items-center w-full h-16 mb-4">                    
+                  <Text className="text-[#28282B] text-lg">{exercise.title}</Text>
+                  <TouchableOpacity style={styles.btnExit} onPress={()=> onClick(exercise.id)}>
+                      <Ionicons name='close' size={24} color={'#28282B'}></Ionicons>
+                  </TouchableOpacity>
+                </View>
+              )
+            })
+          }
+
             <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#165724] rounded shadow-md">
                 <Text className="text-[#d4edda] text-xl">Justificação de Silogismos</Text>
                 <Ionicons name="checkmark-outline" size={24} color={'#d4edda'}></Ionicons>
@@ -25,27 +32,7 @@ const ExList = () => {
             <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#942e30] rounded shadow-md">
                 <Text className="text-[#f8d7da] text-xl">Valorização de Silogismos</Text>
                 <Ionicons name="close-outline" size={24} color={'#f8d7da'}></Ionicons>
-            </View>
-
-            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
-                <Text className="text-[#28282B] text-xl">Equivalência da Implicação</Text>
-            </View>
-
-            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
-                <Text className="text-[#28282B] text-xl">Falso Silogismo</Text>
-            </View>
-
-            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
-                <Text className="text-[#28282B] text-xl">Termos do Silogismo</Text>
-            </View>
-
-            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
-                <Text className="text-[#28282B] text-xl">Silogismo Jurídico</Text>
-            </View>
-
-            <View className="p-4 bg-[#fff] w-full mb-4 rounded shadow-md">
-                <Text className="text-[#28282B] text-xl">Tipos de Silogismo</Text>
-            </View>                        
+            </View>                    
         </View>
     )
 }
@@ -125,4 +112,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ExList;
+export default Exercises;
