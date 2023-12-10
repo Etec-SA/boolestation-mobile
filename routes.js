@@ -1,11 +1,16 @@
 import { View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Ionicons } from '@expo/vector-icons'
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Modules from './pages/Home/Modules'
 import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile'
 import Ranking from './pages/Ranking/Ranking'
 import SignForm from './pages/Forms/SignForm'
+import LoginForm from './pages/Forms/LoginForm'
+import Theory from './pages/Home/Theory';
+import Forms from './pages/Forms/Forms';
+import Config from './pages/Config/Config'
 
 const Tab = createBottomTabNavigator();
 
@@ -28,32 +33,44 @@ export const Routes = () => {
                 headerShown: false,
                 tabBarIcon: ({ size, color }) => (
                     <View>
-                        <Ionicons name='home' size={size} color={color}></Ionicons> 
+                        <MaterialCommunityIcons name="home" color={color} size={size} />  
                     </View>
                     )
                 }}
             />
 
-            <Tab.Screen name='Ranking' component={Ranking} options={{
+            <Tab.Screen name='Ranking' component={Forms} options={{
                 headerShown: false,
                 tabBarIcon: ({ size, color }) => (
                     <View>
-                        <Ionicons name='trophy' size={size} color={color}></Ionicons> 
+                        <MaterialCommunityIcons name="trophy-variant" color={color} size={size} /> 
                     </View>
                 )
             }}
             
-            />
+            />     
 
-            <Tab.Screen name='SignForm' component={SignForm} options={{
+            <Tab.Screen name='Profile' component={Profile} options={{
                 headerShown: false,
                 tabBarIcon: ({ size, color }) => (
                     <View>
-                        <Ionicons name='person' size={size} color={color}></Ionicons> 
+                        <MaterialCommunityIcons name="account" color={color} size={size} />  
                     </View>
-                    )
-                }}
-            />          
+                )
+            }}
+            
+            />  
+
+            <Tab.Screen name='Config' component={Config} options={{
+                headerShown: false,
+                tabBarIcon: ({ size, color }) => (
+                    <View>
+                        <MaterialCommunityIcons name="cog" color={color} size={size} />  
+                    </View>
+                )
+            }}
+            
+            /> 
         </Tab.Navigator>
     );
 }

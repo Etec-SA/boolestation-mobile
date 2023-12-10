@@ -39,6 +39,123 @@
       ]
     },
     {
+      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1b",
+      "title": "Monark",
+      "slug": "silogismos",
+      "content": "Exploraremos aqui os silogismos da lógica do Monark",
+      "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+      "createdAt": "2023-11-16T21:45:17.281Z",
+      "updatedAt": "2023-11-16T21:45:17.281Z",
+      "exercises": [
+        {
+          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1b",
+          "title": "Invalidade de Silogismos",
+          "description": "Qual dos seguintes silogismos possui uma forma inválida?",
+          "createdAt": "2023-11-16T21:45:17.419Z",
+          "alternatives": [
+            {
+              "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
+              "isCorrect": false,
+              "content": "Silogismo Válido"
+            },
+            {
+              "id": "673965bc-cc26-4300-a1f5-8287124a4108",
+              "isCorrect": false,
+              "content": "Silogismo Válido 2"
+            },
+            {
+              "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+              "isCorrect": true,
+              "content": "Silogismo Inválido"
+            },
+            {
+              "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
+              "isCorrect": false,
+              "content": "Silogismo Válido 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1c",
+      "title": "Barreto Girassol",
+      "slug": "silogismos",
+      "content": "Batalha de Deuses",
+      "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+      "createdAt": "2023-11-16T21:45:17.281Z",
+      "updatedAt": "2023-11-16T21:45:17.281Z",
+      "exercises": [
+        {
+          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1c",
+          "title": "Invalidade de Silogismos",
+          "description": "Qual dos seguintes silogismos possui uma forma inválida?",
+          "createdAt": "2023-11-16T21:45:17.419Z",
+          "alternatives": [
+            {
+              "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
+              "isCorrect": false,
+              "content": "Silogismo Válido"
+            },
+            {
+              "id": "673965bc-cc26-4300-a1f5-8287124a4108",
+              "isCorrect": false,
+              "content": "Silogismo Válido 2"
+            },
+            {
+              "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+              "isCorrect": true,
+              "content": "Silogismo Inválido"
+            },
+            {
+              "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
+              "isCorrect": false,
+              "content": "Silogismo Válido 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1d",
+      "title": "Gravo com a tekpix",
+      "slug": "silogismos",
+      "content": "matei o jotapê é a morte da netflix",
+      "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+      "createdAt": "2023-11-16T21:45:17.281Z",
+      "updatedAt": "2023-11-16T21:45:17.281Z",
+      "exercises": [
+        {
+          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1d",
+          "title": "Invalidade de Silogismos",
+          "description": "Qual dos seguintes silogismos possui uma forma inválida?",
+          "createdAt": "2023-11-16T21:45:17.419Z",
+          "alternatives": [
+            {
+              "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
+              "isCorrect": false,
+              "content": "Silogismo Válido"
+            },
+            {
+              "id": "673965bc-cc26-4300-a1f5-8287124a4108",
+              "isCorrect": false,
+              "content": "Silogismo Válido 2"
+            },
+            {
+              "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+              "isCorrect": true,
+              "content": "Silogismo Inválido"
+            },
+            {
+              "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
+              "isCorrect": false,
+              "content": "Silogismo Válido 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
       "title": "Operador de Implicação",
       "slug": "operador-de-implicacao",

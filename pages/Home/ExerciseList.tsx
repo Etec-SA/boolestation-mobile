@@ -1,39 +1,70 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
-import { Ionicons } from '@expo/vector-icons'
+import Animated, { FadeIn, FadeOutLeft } from 'react-native-reanimated';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { NativeWindStyleSheet } from "nativewind";
 import lessonsMock from './fixtures/lessons.json';
+import cache from "../../cache";
 
 NativeWindStyleSheet.setOutput({
     default: "native",
   });
 
-const Exercises = ({data, onClick}: {data: typeof lessonsMock[0]['exercises'], onClick: any}) => {
+const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['exercises'], onClick: any, changePage: any}) => {
+  const [cachedData, setCachedData] = useState<any>({});
+  
+  useEffect(()=>{
+    const item = cache.getItem('exercisesStatus');
+    setCachedData(item);
+  }, [data]);
+
     return(
-        <View className="flex-1 justify-center items-center bg-[#f0f0f0] px-4 h-96">
+        <Animated.View 
+          className="flex-1 justify-start items-center bg-[#f0f0f0] px-4 pt-14 h-96"
+          entering={FadeIn.duration(200)}
+          exiting={FadeOutLeft.duration(200)}  
+        >
+          <View className="flex-row justify-between items-center w-full h-16 mb-4">                    
+            <TouchableOpacity className="flex-row justify-center" onPress={()=>{changePage('Lessons')}}>
+              <MaterialCommunityIcons name="chevron-left" color="gray" size={30} />
+              <Text className="ml-2 text-gray-500 text-lg font-semibold mb-2">Exercícios</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btnExit} onPress={()=>{changePage('Theory')}}>
+              <MaterialCommunityIcons name="notebook" color="gray" size={30} />
+            </TouchableOpacity>
+          </View>
+
           {
             data.map((exercise)=>{
               return (
-                <View className="p-4 flex-row justify-between items-center w-full h-16 mb-4">                    
-                  <Text className="text-[#28282B] text-lg">{exercise.title}</Text>
-                  <TouchableOpacity style={styles.btnExit} onPress={()=> onClick(exercise.id)}>
-                      <Ionicons name='close' size={24} color={'#28282B'}></Ionicons>
-                  </TouchableOpacity>
-                </View>
+                <TouchableOpacity className="w-full" onPress={()=> {onClick(exercise.id)}} key={exercise.id}>
+                  <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">                   
+                    <Text className="text-gray-500 text-xl">{exercise.title}</Text>
+                    { cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="check" color="black" size={25} /> : null }
+                    { !cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="close" color="black" size={25} /> : null }
+                  </View>
+                </TouchableOpacity>
               )
             })
           }
 
+            <TouchableOpacity className="w-full">
+              <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">
+                <Text className="text-gray-500 text-xl">Justificação de Silogismos</Text>
+              </View>
+            </TouchableOpacity>                 
+
             <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#165724] rounded shadow-md">
                 <Text className="text-[#d4edda] text-xl">Justificação de Silogismos</Text>
-                <Ionicons name="checkmark-outline" size={24} color={'#d4edda'}></Ionicons>
+                <MaterialCommunityIcons name="check" color="#d4edda" size={20} />
             </View>
 
             <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#942e30] rounded shadow-md">
                 <Text className="text-[#f8d7da] text-xl">Valorização de Silogismos</Text>
-                <Ionicons name="close-outline" size={24} color={'#f8d7da'}></Ionicons>
+                <MaterialCommunityIcons name="close" color="#f8d7da" size={20} />
             </View>                    
-        </View>
+        </Animated.View>
     )
 }
 

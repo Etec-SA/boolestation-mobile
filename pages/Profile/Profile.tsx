@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
-import { Ionicons } from '@expo/vector-icons'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, ScrollView } from "react-native";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { NativeWindStyleSheet } from "nativewind";
 
 NativeWindStyleSheet.setOutput({
@@ -11,22 +11,60 @@ const Profile = () => {
     return(
         <View style={styles.container}>
             <View style={styles.photoBox}>
-              <View style={styles.header}>
-                <Text style={styles.perfilT}>Perfil</Text>
-              </View>
-                <View className="rounded-full" style={styles.profile}></View>
-                <View style={styles.atribute}>
-                    <Text style={styles.tilte}>Luca Poe</Text>
-                    <Text style={styles.secTitle}>pucaloe</Text>
+              <Image className="rounded-full" style={styles.profile}
+                source={{
+                  uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRufZnFfkbBkkt8pUqJSltJX_h41R9WEB_o2EKjLShFgTPtjFGUcn1vAQexstTEdQdYJ0c',
+                }}
+              />
+            </View>
+
+            <View style={styles.contenteTheFato}>
+              <View className="w-full p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
+                <View className="flex-row justify-start items-center">
+                  <Text className="text-lg font-bold text-gray-500">Kayk Santos</Text>
+                  <Text className="text-sm font-base italic text-gray-500 ml-2">kayakdelas</Text>
                 </View>
-                <View className="shadow-md" style={styles.dataBox}>
-                  <View className="rounded-full" style={styles.points}>
-                      <Text style={styles.tit}>200</Text>
-                  </View>                  
-                  <View style={styles.expBox}>
-                    <Text style={styles.exp}>Exp Atual</Text>
-                    <Text style={styles.secTitl}>Titulo: O Aprendiz</Text>
-                  </View> 
+
+                <View className="flex-row justify-center gap-x-2 w-full mt-4">
+                  <TouchableOpacity className="flex-row justify-center items-center w-full h-8 bg-[#323232] rounded-full">
+                  <MaterialCommunityIcons name="pencil" color="#f0f0f0" size={16} />
+                    <Text className="text-[#f0f0f0] text-sm ml-1">Editar</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+              <View className="flex-row justify-between items-center w-full">
+                <View className="flex-column justify-center items-center w-[47%] h-[200] p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
+                  <View className="justify-center items-center">
+                    <View className="h-[70] w-[70] border-4 border-[#DAA520] justify-center items-center rounded-full">
+                      <Text className="text-[#DAA520] text-xl font-black">200</Text>
+                    </View>
+
+                    <View className="justify-center items-center mt-2">
+                      <Text className="text-[#323232] text-sm font-medium">Exp Atual</Text>
+                    </View>
+                  </View>
+
+                  <View className="justify-center items-center">
+                    <Text className="text-[#323232] text-xl font-black">O Aprendiz</Text>
+                  </View>
+                </View>
+
+                <View className="flex-column justify-center items-center w-[47%] h-[200] p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
+                  <View className="justify-center items-center">
+                    <View className="h-[70] w-[70] justify-center items-center rounded-full">
+                      <MaterialCommunityIcons name="trophy-variant" color="#DAA520" size={60} />
+                    </View>
+
+                    <View className="justify-center items-center mt-2">
+                      <Text className="text-[#323232] text-sm font-medium">Top 24</Text>
+                    </View>
+                  </View>
+
+                  <View className="justify-center items-center">
+                    <Text className="text-[#323232] text-xl font-black">Ranking</Text>
+                  </View>
+                </View>
               </View>
             </View>
         </View>
@@ -41,14 +79,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#f0f0f0'
     },
     photoBox:{
-      justifyContent: 'flex-start',
+      justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#28282B',
+      backgroundColor: '#fff',
       width: '100%',
       padding: 10,
-      height: 380,
-      borderBottomRightRadius: 40,
-      borderBottomLeftRadius: 40,
+      height: 150,
       gap: 20,
       shadowColor: "#000", 
       shadowOffset: { width: 0, height: 4 }, 
@@ -57,12 +93,13 @@ const styles = StyleSheet.create({
     },
     tilte:{
       fontSize: 24,
-      color: '#f0f0f0',
+      color: '#28282B',
       fontWeight: 'bold'
     },
     secTitle:{
       fontSize: 16,
-      color: '#f0f0f0',
+      color: 'gray',
+      fontStyle: "italic"
     },
     secTitl:{
       fontSize: 16,
@@ -74,16 +111,15 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     dataBox:{
+      marginTop: 30,
       justifyContent: "center",
       alignItems: 'center',
-      backgroundColor: '#fff',
-      width: '80%',
+      width: 200,
       height: 200,
-      position: "absolute",
-      top: '90%',
       borderRadius: 30,
       gap: 20,
       padding: 10,
+      backgroundColor: "#fff"
     },
     points:{
       justifyContent: 'center',
@@ -95,13 +131,16 @@ const styles = StyleSheet.create({
     },
     perfilT:{
       fontSize: 18,
-      color: '#f0f0f0',
+      color: 'gray',
     },
     profile:{
       backgroundColor: '#f0f0f0',
-      height: 150,
-      width: 150,
-      
+      height: 120,
+      width: 120,
+      borderWidth: 2,
+      borderColor: "#fff",
+      position: 'absolute',
+      top: "50%"
     },
     header:{
       width: '100%',
@@ -128,6 +167,14 @@ const styles = StyleSheet.create({
       color: '#28282B',
       fontSize: 16,
       fontWeight: '400',
+    }, 
+    contenteTheFato: {
+      marginTop: 50,
+      width: "100%",
+      padding: 18, 
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
     }
 })
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, SafeAreaView, FlatList } from "react-native";
 import { NativeWindStyleSheet } from "nativewind";
 import ExBox from "../../components/ExBox/ExBox";
 import { getModules } from "../../api/module";
@@ -9,7 +9,7 @@ NativeWindStyleSheet.setOutput({
   default: "native",
 });
 
-const Modules = ({onClick}: {onClick: any}) => {
+const Modules = ({ onClick }: { onClick: any }) => {
   const [modules, setModules] = useState(modulesMock);
 
   /**
@@ -20,8 +20,7 @@ const Modules = ({onClick}: {onClick: any}) => {
     const fetchModules = async () => {
       try {
         const modulesData = await getModules();
-
-        setModules(modulesMock);
+        setModules(modulesData); // Assuming modulesData is the actual data from the API
       } catch (error) {
         console.error("Error fetching modules:", error);
       }
@@ -31,8 +30,19 @@ const Modules = ({onClick}: {onClick: any}) => {
     */
   }, []);
 
+  const renderItem = ({ item }: { item: any }) => (
+    <ExBox
+      key={item.id}
+      title={item.title}
+      description={item.description}
+      onClick={() => {
+        onClick(item.id);
+      }}
+    />
+  );
+
   return (
-    <View className="flex-1 justify-start items-center bg-[#f0f0f0] px-4">
+    <SafeAreaView className="flex-1 justify-start items-center bg-[#f0f0f0] px-4">
       <View className="mt-8 flex justify-center items-center h-32 w-full">
         <Image
           className="w-40 h-40"
@@ -44,18 +54,13 @@ const Modules = ({onClick}: {onClick: any}) => {
 
       <View className="w-full mt-2">
         <Text className="text-gray-500 text-lg font-semibold mb-2 ml-4">Módulos</Text>
-        {modules.map((module) => (
-          <ExBox 
-            key={module['id']} 
-            title={module['title']} 
-            description={module['description']}
-            onClick={()=>{
-              onClick(module['id']);
-            }}
-          />
-        ))}
+        <FlatList
+          data={modules}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+        />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
