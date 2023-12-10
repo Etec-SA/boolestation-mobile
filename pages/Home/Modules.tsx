@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Image, SafeAreaView, FlatList } from "react-native";
+import { View, Text, Image, SafeAreaView, FlatList, StyleSheet } from "react-native";
 import { NativeWindStyleSheet } from "nativewind";
 import ExBox from "../../components/ExBox/ExBox";
+import Header from "../../components/Header/Header";
 import { getModules } from "../../api/module";
 import modulesMock from './fixtures/modules.json';
 
@@ -42,26 +43,37 @@ const Modules = ({ onClick }: { onClick: any }) => {
   );
 
   return (
-    <SafeAreaView className="flex-1 justify-start items-center bg-[#f0f0f0] px-4">
-      <View className="mt-8 flex justify-center items-center h-32 w-full">
-        <Image
-          className="w-40 h-40"
-          source={{
-            uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',
-          }}
-        />
-      </View>
-
-      <View className="w-full mt-2">
-        <Text className="text-gray-500 text-lg font-semibold mb-2 ml-4">Módulos</Text>
-        <FlatList
-          data={modules}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id.toString()}
-        />
-      </View>
+    <SafeAreaView style={styles.container}>
+      <FlatList
+        data={modules}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id.toString()}
+        ListHeaderComponent={Header}
+        ListHeaderComponentStyle={styles.header}
+        contentContainerStyle={styles.flatListContent}
+        showsVerticalScrollIndicator={false}
+        nestedScrollEnabled={true}
+      />
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "center",
+    backgroundColor: "#f0f0f0",
+    paddingHorizontal: 18
+  },
+  flatListContent: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+  },
+  header: {
+    width: "100%"
+  }
+});
 
 export default Modules;

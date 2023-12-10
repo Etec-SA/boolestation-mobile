@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, StyleSheet, TextInput, ScrollView, SafeAreaView, Image } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -38,64 +38,80 @@ const LoginForm = ({changePage}: {changePage: any}) => {
     }
   
     return(
-      <View className="flex-1 justify-center items-center bg-[#f0f0f0] px-4">
-        <Image className="w-60 h-60" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',}} />
+      <SafeAreaView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.scrollViewContent}>
+          <Image className="w-60 h-60" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',}} />
 
-        <Controller control={control} name="username" render={({ field: { onChange, onBlur, value } }) => (
-          <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#fff] px-4 mt-4 rounded-md text-gray-600">
-            <MaterialCommunityIcons className="h-12" name="account" color="gray" size={18} />
-            <TextInput 
-              className="w-[100%] h-12 bg-[#fff] p-4 rounded-md text-gray-600 text-sm" 
-              onChangeText={onChange} 
-              onBlur={onBlur} 
-              value={value} 
-              placeholder="Nome de Usuário" 
-              autoCorrect={false}
-              keyboardType="default"
-              autoCapitalize="none"
-            />
-          </View>
-        )}
-        />
+          <Controller control={control} name="username" render={({ field: { onChange, onBlur, value } }) => (
+            <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#fff] px-4 mt-4 rounded-md text-gray-600">
+              <MaterialCommunityIcons className="h-12" name="account" color="gray" size={18} />
+              <TextInput 
+                className="w-[100%] h-12 bg-[#fff] p-4 rounded-md text-gray-600 text-sm" 
+                onChangeText={onChange} 
+                onBlur={onBlur} 
+                value={value} 
+                placeholder="Nome de Usuário" 
+                autoCorrect={false}
+                keyboardType="default"
+                autoCapitalize="none"
+              />
+            </View>
+          )}
+          />
 
-        {errors.username && <Text className="w-[95%] text-[#d10d18] text-sm font-normal pt-2">{errors.username?.message}</Text>}
+          {errors.username && <Text className="w-[95%] text-[#d10d18] text-sm font-normal pt-2">{errors.username?.message}</Text>}
 
-        <Controller control={control} name="password" render={({ field: { onChange, onBlur, value } }) => (
-          <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#fff] px-4 mt-8 rounded-md text-gray-600">
-            <MaterialCommunityIcons className="h-12" name="lock" color="gray" size={18} />
-            <TextInput 
-              className="w-[100%] h-12 bg-[#fff] p-4 rounded-md text-gray-600 text-sm" 
-              onChangeText={onChange} 
-              onBlur={onBlur} 
-              value={value} 
-              placeholder="Senha" 
-              autoCorrect={false}
-              keyboardType="default"
-              autoCapitalize="none"
-              secureTextEntry
-            />
-          </View>
-        )}
-        />
+          <Controller control={control} name="password" render={({ field: { onChange, onBlur, value } }) => (
+            <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#fff] px-4 mt-8 rounded-md text-gray-600">
+              <MaterialCommunityIcons className="h-12" name="lock" color="gray" size={18} />
+              <TextInput 
+                className="w-[100%] h-12 bg-[#fff] p-4 rounded-md text-gray-600 text-sm" 
+                onChangeText={onChange} 
+                onBlur={onBlur} 
+                value={value} 
+                placeholder="Senha" 
+                autoCorrect={false}
+                keyboardType="default"
+                autoCapitalize="none"
+                secureTextEntry
+              />
+            </View>
+          )}
+          />
 
-        {errors.password && <Text className="w-[95%] pt-2 text-[#d10d18] text-sm font-normal">{errors.password?.message}</Text>}
-        <Text className="text-gray-600 text-right underline text-sm w-[95%] pt-2">Esqueceu a senha?</Text>
+          {errors.password && <Text className="w-[95%] pt-2 text-[#d10d18] text-sm font-normal">{errors.password?.message}</Text>}
+          <Text className="text-gray-600 text-right underline text-sm w-[95%] pt-2">Esqueceu a senha?</Text>
 
-        <Button 
-          title="Entrar" 
-          isLoading={loading} 
-          onPress={handleSubmit(handleSignIn)} 
-        />
+          <Button 
+            title="Entrar" 
+            isLoading={loading} 
+            onPress={handleSubmit(handleSignIn)} 
+          />
 
-        <Link 
-          onPress={() => {
-            changePage('SignUp')
-          }}
-          title="Não possui uma conta?"
-          titlePress="Criar agora."
-        />
-      </View>
+          <Link 
+            onPress={() => {
+              changePage('SignUp')
+            }}
+            title="Não possui uma conta?"
+            titlePress="Criar agora."
+          />
+        </ScrollView>
+      </SafeAreaView>
     );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    backgroundColor: "#f0f0f0",
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 18,
+  },
+});
 
 export default LoginForm;

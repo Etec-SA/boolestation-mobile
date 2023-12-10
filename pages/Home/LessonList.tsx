@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, StyleSheet } from "react-native";
 import Animated, { FadeIn, FadeOutLeft } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { NativeWindStyleSheet } from "nativewind";
@@ -12,9 +12,21 @@ NativeWindStyleSheet.setOutput({
 
 const Lessons = ({ data, onClick, changePage }: { data: typeof lessonsMock, onClick: any, changePage: any }) => {
 
+  const renderItem = ({ item }: { item: any }) => (
+    <LessonBox
+      key={item.id}
+      title={item.title}
+      description={item.content}
+      onClick={() => {
+        onClick(item.id);
+      }}
+      exercisesLength={item.exercises.length}
+    />
+  );
+
   return (
     <Animated.View
-      className="flex-1 bg-[#f0f0f0] px-4 pt-14"
+      style={styles.header}
       entering={FadeIn.duration(200)}
       exiting={FadeOutLeft.duration(200)}
     >
@@ -26,24 +38,41 @@ const Lessons = ({ data, onClick, changePage }: { data: typeof lessonsMock, onCl
           </TouchableOpacity>
         </View>
 
-        <View className="flex-row justify-center flex-wrap w-full mt-6">
-          {
-            data.map((lesson, index) => (
-              <LessonBox
-                key={lesson.id}
-                title={lesson.title}
-                description={lesson.content}
-                onClick={() => {
-                  onClick(lesson.id);
-                }}
-                exercisesLength={lesson.exercises.length}
-              />
-            ))
-          }
-        </View>
+        <FlatList
+          contentContainerStyle={styles.flatListContent}
+          data={data}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={renderItem}
+          showsVerticalScrollIndicator={false}
+          nestedScrollEnabled={true}
+        />
       </View>
     </Animated.View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    backgroundColor: "#f0f0f0",
+  },
+  flatListContent: {
+    flexDirection: "row", 
+    justifyContent: "center", 
+    flexWrap: "wrap", 
+    width: "100%", 
+    marginTop: 6,
+    paddingBottom: 40 
+  },
+  header: {
+    flex: 1, 
+    justifyContent: 'flex-start', 
+    alignItems: 'center', 
+    backgroundColor: '#f0f0f0', 
+    paddingHorizontal: 18,
+    paddingTop: 45
+  }
+});
 
 export default Lessons;

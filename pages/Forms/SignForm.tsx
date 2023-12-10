@@ -1,44 +1,64 @@
-import React, { useState} from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, ActivityIndicator, SafeAreaView } from "react-native";
-import Animated, { FadeIn } from "react-native-reanimated";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  ScrollView,
+  Image,
+  ActivityIndicator,
+  SafeAreaView,
+} from "react-native";
 import { useForm, Controller } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup';
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { signUp, authenticate } from "../../api/user";
+import { NativeWindStyleSheet } from "nativewind";
 import Button from "../../components/FormComponents/Button";
 import Input from "../../components/FormComponents/Input";
 import Link from "../../components/FormComponents/Link";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons'
-import { NativeWindStyleSheet } from "nativewind";
-import { signUp, authenticate  } from "../../api/user";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 NativeWindStyleSheet.setOutput({
   default: "native",
 });
 
-type RegisterData = {
-  
-}
+type RegisterData = {};
 
-const SignForm = ({changePage}: {changePage: any}) => {
-    const [loading, setIsLoading] = useState(false)
-    const { control, handleSubmit, formState: { errors } } = useForm({})
+const SignForm = ({ changePage }: { changePage: any }) => {
+  const [loading, setIsLoading] = useState(false);
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({});
 
-    async function handleSignIn(data: any) {
-      const { username, email, password } = data;
-      setIsLoading(true);
-      await signUp({username, email, password, name: username, birthdate: '2000-01-01'});
-      const auth = await authenticate({email, password});
-      await AsyncStorage.setItem('token', auth.access_token);
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
-    }
-  
-    return(
-      <SafeAreaView className="flex-1 justify-center items-center bg-[#f0f0f0] px-4">
-        <Image className="w-60 h-60" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',}} />
+  async function handleSignIn(data: any) {
+    const { username, email, password } = data;
+    setIsLoading(true);
+    await signUp({
+      username,
+      email,
+      password,
+      name: username,
+      birthdate: "2000-01-01",
+    });
+    const auth = await authenticate({ email, password });
+    await AsyncStorage.setItem("token", auth.access_token);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <Image
+          className="w-60 h-60"
+          source={{
+            uri:
+              "https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png",
+          }}
+        />
 
         <Controller control={control} name="username" render={({ field: { onChange, onBlur, value } }) => (
           <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#fff] px-4 mb-6 rounded-md text-gray-600">
@@ -91,22 +111,37 @@ const SignForm = ({changePage}: {changePage: any}) => {
           </View>
         )}
         />
-        
-        <Button 
-          title="Cadastrar" 
-          isLoading={loading} 
-          onPress={handleSubmit(handleSignIn)} 
+
+        <Button
+          title="Cadastrar"
+          isLoading={loading}
+          onPress={handleSubmit(handleSignIn)}
         />
 
-        <Link 
+        <Link
           onPress={() => {
-            changePage('SignIn')
+            changePage("SignIn");
           }}
           title="Já possui uma conta?"
           titlePress="Entrar agora"
         />
-      </SafeAreaView>
-    );
-}
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    backgroundColor: "#f0f0f0",
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 18,
+  },
+});
 
 export default SignForm;

@@ -17,7 +17,7 @@ const Exercise = (props: {id: {exerciseId: string, lessonId: string}, statement:
 
     return(
         <>
-            <View className="flex-row justify-between items-center w-full h-72 mb-4">                    
+            <View className="flex-row justify-between items-center w-full h-26 mb-4">                    
                 <TouchableOpacity className="flex-row justify-center" onPress={()=>{
                     setBackgrounds({correct: '#e0dede', wrong: '#e0dede'});
                     changePage('Exercises');

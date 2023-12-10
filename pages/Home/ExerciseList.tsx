@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from "react-native";
 import Animated, { FadeIn, FadeOutLeft } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { NativeWindStyleSheet } from "nativewind";
@@ -11,16 +11,10 @@ NativeWindStyleSheet.setOutput({
   });
 
 const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['exercises'], onClick: any, changePage: any}) => {
-  const [cachedData, setCachedData] = useState<any>({});
-  
-  useEffect(()=>{
-    const item = cache.getItem('exercisesStatus');
-    setCachedData(item);
-  }, [data]);
 
     return(
-        <Animated.View 
-          className="flex-1 justify-start items-center bg-[#f0f0f0] px-4 pt-14 h-96"
+        <Animated.ScrollView
+          contentContainerStyle={styles.scrollViewContent}
           entering={FadeIn.duration(200)}
           exiting={FadeOutLeft.duration(200)}  
         >
@@ -41,30 +35,12 @@ const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['ex
                 <TouchableOpacity className="w-full" onPress={()=> {onClick(exercise.id)}} key={exercise.id}>
                   <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">                   
                     <Text className="text-gray-500 text-xl">{exercise.title}</Text>
-                    { cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="check" color="black" size={25} /> : null }
-                    { !cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="close" color="black" size={25} /> : null }
                   </View>
                 </TouchableOpacity>
               )
             })
-          }
-
-            <TouchableOpacity className="w-full">
-              <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">
-                <Text className="text-gray-500 text-xl">Justificação de Silogismos</Text>
-              </View>
-            </TouchableOpacity>                 
-
-            <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#165724] rounded shadow-md">
-                <Text className="text-[#d4edda] text-xl">Justificação de Silogismos</Text>
-                <MaterialCommunityIcons name="check" color="#d4edda" size={20} />
-            </View>
-
-            <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#942e30] rounded shadow-md">
-                <Text className="text-[#f8d7da] text-xl">Valorização de Silogismos</Text>
-                <MaterialCommunityIcons name="close" color="#f8d7da" size={20} />
-            </View>                    
-        </Animated.View>
+          }             
+      </Animated.ScrollView>
     )
 }
 
@@ -140,6 +116,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3, 
     shadowRadius: 3, 
     backgroundColor: '#942e30',
+  },
+  scrollViewContent:{
+    flex: 1, 
+    justifyContent: 'flex-start', 
+    alignItems: 'center', 
+    backgroundColor: '#f0f0f0', 
+    paddingHorizontal: 18,
+    paddingTop: 40
   }
 })
 
