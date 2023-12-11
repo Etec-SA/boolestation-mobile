@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "center",
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#141415",
     paddingHorizontal: 18
   },
   flatListContent: {

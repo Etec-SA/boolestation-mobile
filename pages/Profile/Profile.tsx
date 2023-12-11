@@ -19,14 +19,14 @@ const Profile = () => {
             </View>
 
             <View style={styles.contenteTheFato}>
-              <View className="w-full p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
+              <View className="w-full p-4 rounded-3xl my-3 bg-[#28282B] shadow-md">
                 <View className="flex-row justify-start items-center">
-                  <Text className="text-lg font-bold text-gray-500">Aristóteles</Text>
-                  <Text className="text-sm font-base italic text-gray-500 ml-2">traditionalist</Text>
+                  <Text className="text-lg font-bold text-[#f0f0f0]">Aristóteles</Text>
+                  <Text className="text-sm font-base italic text-[#f0f0f0] ml-2">traditionalist</Text>
                 </View>
 
                 <View className="flex-row justify-center gap-x-2 w-full mt-4">
-                  <TouchableOpacity className="flex-row justify-center items-center w-full h-8 bg-[#323232] rounded-full">
+                  <TouchableOpacity className="flex-row justify-center items-center w-full h-8 bg-[#1ED616] rounded-full">
                   <MaterialCommunityIcons name="pencil" color="#f0f0f0" size={16} />
                     <Text className="text-[#f0f0f0] text-sm ml-1">Editar</Text>
                   </TouchableOpacity>
@@ -34,35 +34,35 @@ const Profile = () => {
               </View>
 
               <View className="flex-row justify-between items-center w-full">
-                <View className="flex-column justify-center items-center w-[47%] h-[200] p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
+                <View className="flex-column justify-center items-center w-[47%] h-[200] p-4 rounded-3xl my-3 bg-[#28282B] shadow-md">
                   <View className="justify-center items-center">
                     <View className="h-[70] w-[70] border-4 border-[#DAA520] justify-center items-center rounded-full">
                       <Text className="text-[#DAA520] text-xl font-black">900</Text>
                     </View>
 
                     <View className="justify-center items-center mt-2">
-                      <Text className="text-[#323232] text-sm font-medium">Exp Atual</Text>
+                      <Text className="text-[#f0f0f0] text-sm font-medium">Exp Atual</Text>
                     </View>
                   </View>
 
                   <View className="justify-center items-center">
-                    <Text className="text-[#323232] text-xl font-black">O Logicista</Text>
+                    <Text className="text-[#f0f0f0] text-xl font-black">O Logicista</Text>
                   </View>
                 </View>
 
-                <View className="flex-column justify-center items-center w-[47%] h-[200] p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
+                <View className="flex-column justify-center items-center w-[47%] h-[200] p-4 rounded-3xl my-3 bg-[#28282B] shadow-md">
                   <View className="justify-center items-center">
                     <View className="h-[70] w-[70] justify-center items-center rounded-full">
                       <MaterialCommunityIcons name="trophy-variant" color="#DAA520" size={60} />
                     </View>
 
                     <View className="justify-center items-center mt-2">
-                      <Text className="text-[#323232] text-sm font-medium">Top 1</Text>
+                      <Text className="text-[#f0f0f0] text-sm font-medium">Top 1</Text>
                     </View>
                   </View>
 
                   <View className="justify-center items-center">
-                    <Text className="text-[#323232] text-xl font-black">Ranking</Text>
+                    <Text className="text-[#f0f0f0] text-xl font-black">Ranking</Text>
                   </View>
                 </View>
               </View>
@@ -76,12 +76,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: '#f0f0f0'
+        backgroundColor: '#141415'
     },
     photoBox:{
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: '#28282B',
       width: '100%',
       padding: 10,
       height: 150,
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
       height: 120,
       width: 120,
       borderWidth: 2,
-      borderColor: "#fff",
+      borderColor: "#28282B",
       position: 'absolute',
       top: "50%"
     },

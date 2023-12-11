@@ -9,13 +9,13 @@ NativeWindStyleSheet.setOutput({
 
 const ExBox = ({title, description, onClick}: {title: string, description: string, onClick: ()=> any}) => {
     return(
-        <View className="flex-row-reverse justify-between w-full p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
+        <View className="flex-row-reverse justify-between w-full p-4 rounded-3xl my-3 bg-[#28282B] shadow-md">
             <View className="w-3/4 pl-1">
                 <View className="p-2">
-                    <Text className="text-lg font-bold text-[#28282B]">{title}</Text>
+                    <Text className="text-lg font-bold text-[#fff]">{title}</Text>
                 </View>
                 <View className="p-2">
-                    <Text className="text-gray-500 text-left font-medium">{description}</Text>
+                    <Text className="text-[#f0f0f0] text-left font-medium">{description}</Text>
                 </View>
             </View>
 

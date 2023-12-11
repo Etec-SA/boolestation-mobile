@@ -54,13 +54,13 @@ const LoginForm = ({changePage, redirectToMain}: {changePage: any, redirectToMai
     return(
       <SafeAreaView style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollViewContent}>
-          <Image className="w-60 h-60" source={{uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',}} />
+          <Image className="w-60 h-60" source={{uri: 'https://github.com/Etec-SA/diagrams/blob/main/logos/VectorLogo.png',}} />
 
           <Controller control={control} name="email" render={({ field: { onChange, onBlur, value } }) => (
-            <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#fff] px-4 mt-4 rounded-md text-gray-600">
-              <MaterialCommunityIcons className="h-12" name="email" color="gray" size={18} />
+            <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#28282B] px-4 mt-8 rounded-md text-[#f0f0f0]">
+              <MaterialCommunityIcons className="h-12" name="email" color="#f0f0f0" size={18} />
               <TextInput 
-                className="w-[100%] h-12 bg-[#fff] p-4 rounded-md text-gray-600 text-sm" 
+                className="w-[100%] h-12 bg-[#28282B] p-4 rounded-md text-[#f0f0f0] text-sm" 
                 onChangeText={onChange} 
                 onBlur={onBlur} 
                 value={value} 
@@ -76,10 +76,10 @@ const LoginForm = ({changePage, redirectToMain}: {changePage: any, redirectToMai
           {errors.email && <Text className="w-[95%] text-[#d10d18] text-sm font-normal pt-2">{errors.email?.message}</Text>}
 
           <Controller control={control} name="password" render={({ field: { onChange, onBlur, value } }) => (
-            <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#fff] px-4 mt-8 rounded-md text-gray-600">
-              <MaterialCommunityIcons className="h-12" name="lock" color="gray" size={18} />
+            <View className="flex-row justify-between items-center shadow-md w-[95%] bg-[#28282B] px-4 mt-8 rounded-md text-[#f0f0f0]">
+              <MaterialCommunityIcons className="h-12" name="lock" color="#f0f0f0" size={18} />
               <TextInput 
-                className="w-[100%] h-12 bg-[#fff] p-4 rounded-md text-gray-600 text-sm" 
+                className="w-[100%] h-12 bg-[#28282B] p-4 rounded-md text-[#f0f0f0] text-sm" 
                 onChangeText={onChange} 
                 onBlur={onBlur} 
                 value={value} 
@@ -94,7 +94,7 @@ const LoginForm = ({changePage, redirectToMain}: {changePage: any, redirectToMai
           />
 
           {errors.password && <Text className="w-[95%] pt-2 text-[#d10d18] text-sm font-normal">{errors.password?.message}</Text>}
-          <Text className="text-gray-600 text-right underline text-sm w-[95%] pt-2">Esqueceu a senha?</Text>
+          <Text className="text-[#f0f0f0] text-right underline text-sm w-[95%] pt-2">Esqueceu a senha?</Text>
 
           <Button 
             title="Entrar" 
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#141415",
   },
   scrollViewContent: {
     flexGrow: 1,

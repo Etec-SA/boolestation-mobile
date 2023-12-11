@@ -9,7 +9,7 @@ NativeWindStyleSheet.setOutput({
 
 const PlacingR = () => {
     return(
-        <View className="bg-white flex justify-between items-center flex-row w-full h-16 mt-5 rounded-2xl px-4 shadow-md">
+        <View className="bg-[#28282B] flex justify-between items-center flex-row w-full h-16 mt-5 rounded-2xl px-4 shadow-md">
             <View className="w-1/10 p-2">
                 <Text className="text-[#DAA520] font-bold text-lg">1</Text>
             </View>

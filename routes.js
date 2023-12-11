@@ -23,7 +23,7 @@ export const Routes = () => {
             tabBarStyle:{
                 borderTopWidth: 0,
                 elevation: 0,
-                backgroundColor: '#fff',
+                backgroundColor: '#28282B',
                 paddingTop: 10,
                 paddingBottom: 10,
                 height: 60

@@ -26,12 +26,12 @@ const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['ex
         >
           <View className="flex-row justify-between items-center w-full h-16 mb-4">                    
             <TouchableOpacity className="flex-row justify-center" onPress={()=>{changePage('Lessons')}}>
-              <MaterialCommunityIcons name="chevron-left" color="gray" size={30} />
-              <Text className="ml-2 text-gray-500 text-lg font-semibold mb-2">Exercícios</Text>
+              <MaterialCommunityIcons name="chevron-left" color="#f0f0f0" size={30} />
+              <Text className="ml-2 text-[#f0f0f0] text-lg font-semibold mb-2">Exercícios</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.btnExit} onPress={()=>{changePage('Theory')}}>
-              <MaterialCommunityIcons name="notebook" color="gray" size={30} />
+              <MaterialCommunityIcons name="notebook" color="#f0f0f0" size={30} />
             </TouchableOpacity>
           </View>
 
@@ -39,10 +39,10 @@ const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['ex
             data.map((exercise)=>{
               return (
                 <TouchableOpacity className="w-full" onPress={()=> {onClick(exercise.id)}} key={exercise.id}>
-                  <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">                   
-                    <Text className="text-gray-500 text-xl">{exercise.title}</Text>
-                    { cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="check" color="black" size={25} /> : null }
-                    { cachedData[exercise.id]?.lastAttemptIsCorrect === false ? <MaterialCommunityIcons name="close" color="black" size={25} /> : null }
+                  <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#28282B] rounded shadow-md">                   
+                    <Text className="text-[#f0f0f0] text-xl">{exercise.title}</Text>
+                    { cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="check" color="#1ED616" size={25} /> : null }
+                    { cachedData[exercise.id]?.lastAttemptIsCorrect === false ? <MaterialCommunityIcons name="close" color="#d01117" size={25} /> : null }
                   </View>
                 </TouchableOpacity>
               )
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'flex-start', 
     alignItems: 'center', 
-    backgroundColor: '#f0f0f0', 
+    backgroundColor: '#141415', 
     paddingHorizontal: 18,
     paddingTop: 40
   }

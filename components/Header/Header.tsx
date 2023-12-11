@@ -12,11 +12,11 @@ const Header = () => {
             <Image
                 className="w-40 h-40"
                 source={{
-                    uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/LogoVectorGray.png',
+                    uri: 'https://raw.githubusercontent.com/Etec-SA/diagrams/main/logos/VectorLogo.png',
                 }}
             />
 
-            <Text className="text-gray-500 text-lg font-semibold ml-4">Módulo</Text>
+            <Text className="text-[#f0f0f0] text-lg font-semibold ml-4">Módulo</Text>
         </View>
     )   
 }

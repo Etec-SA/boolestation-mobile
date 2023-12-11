@@ -15,9 +15,9 @@ interface LinkProps {
 const Link: React.FC<LinkProps> = ({ onPress, title, titlePress }: LinkProps) => {
     return (
         <View className="flex-row justify-center items-center">
-            <Text className="text-gray-600 mt-8 text-sm">{title}</Text>
+            <Text className="text-[#f0f0f0] mt-8 text-sm">{title}</Text>
             <TouchableOpacity onPress={onPress} >
-                <Text className="text-gray-600 mt-8 text-sm italic underline ml-1">{titlePress}</Text>
+                <Text className="text-[#f0f0f0] mt-8 text-sm italic underline ml-1">{titlePress}</Text>
             </TouchableOpacity>
         </View>
     )

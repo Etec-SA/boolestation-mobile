@@ -18,13 +18,13 @@ const Exercise = (props: {id: {exerciseId: string, lessonId: string}, statement:
 
     return(
         <>
-        <SafeAreaView className="flex-1 bg-[#f0f0f0] px-4">                  
+        <SafeAreaView className="flex-1 bg-[#141415] px-4">                  
                 <TouchableOpacity className="flex flex-row my-8" onPress={()=>{
                     setBackgrounds({correct: '#e0dede', wrong: '#e0dede'});
                     changePage('Exercises');
                 }}>
-                    <MaterialCommunityIcons name="chevron-left" color="gray" size={30} />
-                    <Text className="ml-2 text-gray-500 text-lg font-semibold mb-2">Exercício</Text>
+                    <MaterialCommunityIcons name="chevron-left" color="#f0f0f0" size={30} />
+                    <Text className="ml-2 text-[#f0f0f0] text-lg font-semibold mb-2">Exercício</Text>
                 </TouchableOpacity>
 
             <View className="flex flex-col justify-center items-center w-full gap-y-6">

@@ -24,14 +24,14 @@ const LessonBox = ({id, title, description, exercisesLength, onClick}: {id: stri
 
     return(
         <TouchableOpacity onPress={onClick}>
-            <View className="flex-column justify-start gap-y-1 items-center w-40 h-60 rounded-3xl p-4 m-2 bg-[#fff] shadow-md">
+            <View className="flex-column justify-start gap-y-1 items-center w-40 h-60 rounded-3xl p-4 m-2 bg-[#28282B] shadow-md">
                 <View className="w-full h-[10%]">
                     <Text className="text-base font-bold text-[#1ED616]">{title} {percentage == '100.00' ? "⭐" : null}</Text>
                 </View>
 
                 <View className="flex-column justify-between w-full h-[90%]">
                     <View className="w-full py-2">
-                        <Text className="text-gray-500 text-left text-xs font-base">{description}</Text>
+                        <Text className="text-[#f0f0f0] text-left text-xs font-base">{description}</Text>
                     </View>
 
                     <View className="flex-row items-center w-full py-2">

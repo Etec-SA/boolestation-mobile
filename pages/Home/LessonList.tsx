@@ -34,8 +34,8 @@ const Lessons = ({ data, onClick, changePage }: { data: typeof lessonsMock, onCl
       <View className="w-full mt-2">
         <View className="justify-center items-start w-full ">
           <TouchableOpacity className="flex-row justify-center" onPress={() => { changePage('Modules') }}>
-            <MaterialCommunityIcons name="chevron-left" color="gray" size={30} />
-            <Text className="ml-2 text-gray-500 text-lg font-semibold mb-2">Lições</Text>
+            <MaterialCommunityIcons name="chevron-left" color="#f0f0f0" size={30} />
+            <Text className="ml-2 text-[#f0f0f0] text-lg font-semibold mb-2">Lições</Text>
           </TouchableOpacity>
         </View>
 
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#141415",
   },
   flatListContent: {
     flexDirection: "row", 
@@ -64,13 +64,14 @@ const styles = StyleSheet.create({
     flexWrap: "wrap", 
     width: "100%", 
     marginTop: 6,
-    paddingBottom: 40 
+    paddingBottom: 40, 
+    backgroundColor: "#141415"
   },
   header: {
     flex: 1, 
     justifyContent: 'flex-start', 
     alignItems: 'center', 
-    backgroundColor: '#f0f0f0', 
+    backgroundColor: '#141415', 
     paddingHorizontal: 18,
     paddingTop: 45
   },
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'flex-start', 
     alignItems: 'center', 
-    backgroundColor: '#f0f0f0', 
+    backgroundColor: '#141415', 
     paddingHorizontal: 18,
     paddingTop: 40
   }
