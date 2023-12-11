@@ -36,8 +36,8 @@ const Home = () => {
 
   useEffect(()=>{
     if(!exerciseId) return;
-    let actualExercise = lessons[0]?.exercises.filter((exercise: { id: string; })=> exercise.id === exerciseId)[0];
-
+    let actualLesson = lessons.filter(lesson=> lesson.id === lessonId);
+    let actualExercise = actualLesson[0].exercises.filter((exercise: { id: string; })=> exercise.id === exerciseId)[0];
     const alternatives = actualExercise.alternatives.map((alternative: { isCorrect: any; content: any; })=>{
       const {isCorrect, content } = alternative;
       return {

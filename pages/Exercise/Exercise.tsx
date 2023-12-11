@@ -1,10 +1,11 @@
-import { TouchableOpacity, View, Text } from "react-native";
+import { TouchableOpacity, View, Text, ScrollView } from "react-native";
 import { IStatement, IAlternative } from '../../types';
 import Statement from "../../components/Exercise/Statement";
 import Alternative from "../../components/Exercise/Alternative";
 import React, { useState } from "react";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import cache from "../../cache";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Exercise = (props: {id: {exerciseId: string, lessonId: string}, statement: IStatement, alternatives: IAlternative[], changePage: any})=>{
     const [ isDisabled, setIsDisabled ] = useState(false);
@@ -17,15 +18,14 @@ const Exercise = (props: {id: {exerciseId: string, lessonId: string}, statement:
 
     return(
         <>
-            <View className="flex-row justify-between items-center w-full h-72 mb-4">                    
-                <TouchableOpacity className="flex-row justify-center" onPress={()=>{
+        <SafeAreaView className="flex-1 bg-[#f0f0f0] px-4">                  
+                <TouchableOpacity className="flex flex-row my-8" onPress={()=>{
                     setBackgrounds({correct: '#e0dede', wrong: '#e0dede'});
                     changePage('Exercises');
                 }}>
                     <MaterialCommunityIcons name="chevron-left" color="gray" size={30} />
                     <Text className="ml-2 text-gray-500 text-lg font-semibold mb-2">Exercício</Text>
                 </TouchableOpacity>
-            </View>
 
             <View className="flex flex-col justify-center items-center w-full gap-y-6">
                 <Statement title={statement.title} description={statement.description}/>
@@ -40,12 +40,21 @@ const Exercise = (props: {id: {exerciseId: string, lessonId: string}, statement:
                                 onPress={async () => { 
                                         setIsDisabled(true);
                                         try{
-                                            const countType = alternative.isCorrect ? 'correctCount' : 'wrongCount';
+                                            let countType: 'wrongCount' | 'correctCount';
+
+                                            if(!alternative.isCorrect){
+                                                cache.deleteLessonStatus(props.id.lessonId, props.id.exerciseId);
+                                                countType = 'wrongCount';
+                                            }else{
+                                                countType = 'correctCount';
+                                                cache.insertLessonStatus(props.id.lessonId, props.id.exerciseId, true);
+                                            }
+
                                             cache.increaseCount(props.id.exerciseId, countType);
                                             cache.setAttempt(props.id.exerciseId, countType != 'wrongCount');
-                                            //await cache.insertLessonStatus(props.id.lessonId, props.id.exerciseId, true);
                                         }catch(e){
                                             alert(JSON.stringify(e));
+                                            console.log(e);
                                         }
                                         
                                         
@@ -56,7 +65,8 @@ const Exercise = (props: {id: {exerciseId: string, lessonId: string}, statement:
                     })}
                 </View>
             </View>
-        </>
+        </SafeAreaView>
+    </>
     )
 }
 

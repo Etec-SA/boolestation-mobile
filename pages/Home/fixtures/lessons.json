@@ -1,197 +1,1060 @@
 [
-    {
-      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-      "title": "Silogismos",
-      "slug": "silogismos",
-      "content": "Exploraremos aqui os silogismos da lógica tradicional",
-      "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-      "createdAt": "2023-11-16T21:45:17.281Z",
-      "updatedAt": "2023-11-16T21:45:17.281Z",
-      "exercises": [
+  {
+    "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+    "title": "Silogismos",
+    "slug": "silogismos",
+    "content": "Exploraremos aqui os silogismos da lógica tradicional",
+    "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+    "createdAt": "2023-11-16T21:45:17.281Z",
+    "updatedAt": "2023-11-16T21:45:17.281Z",
+    "exercises": [
         {
-          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-          "title": "Invalidade de Silogismos",
-          "description": "Qual dos seguintes silogismos possui uma forma inválida?",
-          "createdAt": "2023-11-16T21:45:17.419Z",
-          "alternatives": [
-            {
-              "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
-              "isCorrect": false,
-              "content": "Silogismo Válido"
-            },
-            {
-              "id": "673965bc-cc26-4300-a1f5-8287124a4108",
-              "isCorrect": false,
-              "content": "Silogismo Válido 2"
-            },
-            {
-              "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-              "isCorrect": true,
-              "content": "Silogismo Inválido"
-            },
-            {
-              "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
-              "isCorrect": false,
-              "content": "Silogismo Válido 3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1b",
-      "title": "Monark",
-      "slug": "silogismos",
-      "content": "Exploraremos aqui os silogismos da lógica do Monark",
-      "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-      "createdAt": "2023-11-16T21:45:17.281Z",
-      "updatedAt": "2023-11-16T21:45:17.281Z",
-      "exercises": [
+            "id": "6e135e31-745e-45a4-b276-eeb5a994b3fc",
+            "title": "Silogismo Categórico",
+            "description": "Qual é a forma padrão de um silogismo categórico?",
+            "createdAt": "2023-12-20T09:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "2c05b3a8-f297-498e-b571-c54328cf8a8e",
+                    "isCorrect": true,
+                    "content": "Duas premissas afirmativas e uma conclusão negativa ou vice-versa."
+                },
+                {
+                    "id": "f8e8e4f5-31c7-4ef1-b63b-25c1916b7b11",
+                    "isCorrect": false,
+                    "content": "Duas premissas negativas e uma conclusão afirmativa."
+                },
+                {
+                    "id": "8b55835c-37f5-4a16-bf66-8c5b5e996c74",
+                    "isCorrect": false,
+                    "content": "Três premissas afirmativas."
+                },
+                {
+                    "id": "6bb1cb07-92cf-4c14-b8b4-bcb5aefdb27f",
+                    "isCorrect": false,
+                    "content": "Duas premissas afirmativas e uma conclusão afirmativa."
+                }
+            ]
+        },
         {
-          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1b",
-          "title": "Invalidade de Silogismos",
-          "description": "Qual dos seguintes silogismos possui uma forma inválida?",
-          "createdAt": "2023-11-16T21:45:17.419Z",
-          "alternatives": [
-            {
-              "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
-              "isCorrect": false,
-              "content": "Silogismo Válido"
-            },
-            {
-              "id": "673965bc-cc26-4300-a1f5-8287124a4108",
-              "isCorrect": false,
-              "content": "Silogismo Válido 2"
-            },
-            {
-              "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-              "isCorrect": true,
-              "content": "Silogismo Inválido"
-            },
-            {
-              "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
-              "isCorrect": false,
-              "content": "Silogismo Válido 3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1c",
-      "title": "Barreto Girassol",
-      "slug": "silogismos",
-      "content": "Batalha de Deuses",
-      "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-      "createdAt": "2023-11-16T21:45:17.281Z",
-      "updatedAt": "2023-11-16T21:45:17.281Z",
-      "exercises": [
+            "id": "e88e6aaf-61d1-49ed-88ee-df15b835c58c",
+            "title": "Termos do Silogismo",
+            "description": "Quantos termos não repetidos são encontrados em um silogismo categórico?",
+            "createdAt": "2023-12-20T09:15:00.000Z",
+            "alternatives": [
+                {
+                    "id": "c77c0b2e-b0e8-4b1d-95c3-080e52a7b7a7",
+                    "isCorrect": true,
+                    "content": "Três."
+                },
+                {
+                    "id": "a6993986-9545-452e-b9d4-aeab1b8e749e",
+                    "isCorrect": false,
+                    "content": "Quatro."
+                },
+                {
+                    "id": "87de17f8-f2f0-42b4-8f14-0157ff4bc5f1",
+                    "isCorrect": false,
+                    "content": "Dois."
+                },
+                {
+                    "id": "0e5c18d0-d72f-409c-89e9-9fcf942150b0",
+                    "isCorrect": false,
+                    "content": "Cinco."
+                }
+            ]
+        },
         {
-          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1c",
-          "title": "Invalidade de Silogismos",
-          "description": "Qual dos seguintes silogismos possui uma forma inválida?",
-          "createdAt": "2023-11-16T21:45:17.419Z",
-          "alternatives": [
-            {
-              "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
-              "isCorrect": false,
-              "content": "Silogismo Válido"
-            },
-            {
-              "id": "673965bc-cc26-4300-a1f5-8287124a4108",
-              "isCorrect": false,
-              "content": "Silogismo Válido 2"
-            },
-            {
-              "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-              "isCorrect": true,
-              "content": "Silogismo Inválido"
-            },
-            {
-              "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
-              "isCorrect": false,
-              "content": "Silogismo Válido 3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1d",
-      "title": "Gravo com a tekpix",
-      "slug": "silogismos",
-      "content": "matei o jotapê é a morte da netflix",
-      "moduleId": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-      "createdAt": "2023-11-16T21:45:17.281Z",
-      "updatedAt": "2023-11-16T21:45:17.281Z",
-      "exercises": [
+            "id": "17280b23-695a-4cd8-9d45-534de7b3c899",
+            "title": "Silogismo Hipotético",
+            "description": "Qual é a característica principal de um silogismo hipotético?",
+            "createdAt": "2023-12-20T09:30:00.000Z",
+            "alternatives": [
+                {
+                    "id": "70b8feae-9c13-40d5-a0c8-8e3c0475077f",
+                    "isCorrect": true,
+                    "content": "Contém pelo menos uma premissa condicional."
+                },
+                {
+                    "id": "b378e4b8-c795-4a6d-b8f0-f6f6a00d204e",
+                    "isCorrect": false,
+                    "content": "Não possui conclusão."
+                },
+                {
+                    "id": "e3c1beaa-f9c4-4aa2-86d3-ba7f4a55eb3f",
+                    "isCorrect": false,
+                    "content": "Possui sempre duas premissas."
+                },
+                {
+                    "id": "240d16db-3d06-432d-a3f0-2c458002782b",
+                    "isCorrect": false,
+                    "content": "Contém apenas premissas afirmativas."
+                }
+            ]
+        },
         {
-          "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1d",
-          "title": "Invalidade de Silogismos",
-          "description": "Qual dos seguintes silogismos possui uma forma inválida?",
-          "createdAt": "2023-11-16T21:45:17.419Z",
-          "alternatives": [
-            {
-              "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
-              "isCorrect": false,
-              "content": "Silogismo Válido"
-            },
-            {
-              "id": "673965bc-cc26-4300-a1f5-8287124a4108",
-              "isCorrect": false,
-              "content": "Silogismo Válido 2"
-            },
-            {
-              "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
-              "isCorrect": true,
-              "content": "Silogismo Inválido"
-            },
-            {
-              "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
-              "isCorrect": false,
-              "content": "Silogismo Válido 3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
-      "title": "Operador de Implicação",
-      "slug": "operador-de-implicacao",
-      "content": "Exploraremos aqui a aplicação do operador de implicação",
-      "moduleId": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
-      "createdAt": "2023-11-16T21:45:17.281Z",
-      "updatedAt": "2023-11-16T21:45:17.281Z",
-      "exercises": [
+            "id": "e141102c-2718-485e-9d14-84484c9d8b0d",
+            "title": "Distribuição de Termos",
+            "description": "Quando um termo é distribuído em uma premissa?",
+            "createdAt": "2023-12-20T09:45:00.000Z",
+            "alternatives": [
+                {
+                    "id": "729f3657-7e9e-4936-93c8-3eae1251ce42",
+                    "isCorrect": true,
+                    "content": "Quando se refere a todos os membros de sua classe."
+                },
+                {
+                    "id": "e0a883a7-fc7a-46eb-87f3-2d8f6251583b",
+                    "isCorrect": false,
+                    "content": "Nunca é distribuído."
+                },
+                {
+                    "id": "24006269-eccc-41b1-a159-dc54666c3d9d",
+                    "isCorrect": false,
+                    "content": "Apenas na conclusão."
+                },
+                {
+                    "id": "c9ac21e8-3124-4a36-826b-f0c1705be686",
+                    "isCorrect": false,
+                    "content": "Quando se refere a pelo menos um membro de sua classe."
+                }
+            ]
+        },
         {
-          "id": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
-          "title": "Equivalência da Implicação",
-          "description": "Quais das seguintes fórmulas é equivalente a uma implicação?",
-          "createdAt": "2023-11-16T21:45:17.419Z",
-          "alternatives": [
-            {
-              "id": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
-              "isCorrect": true,
-              "content": "¬P v Q"
-            },
-            {
-              "id": "3a40bdea-cb78-420c-917f-f61d0d58c6d7",
-              "isCorrect": false,
-              "content": "A ^ A"
-            },
-            {
-              "id": "8db9e069-e4d7-46b9-a4c2-dcc1ae5b90ea",
-              "isCorrect": false,
-              "content": "¬¬(A ^ ¬¬A)"
-            },
-            {
-              "id": "1e38ce3c-c5ef-42f5-852f-53ba77bcaa6c",
-              "isCorrect": false,
-              "content": "A ^ ¬A"
-            }
-          ]
+            "id": "faa7d874-e5d1-4bae-bd3d-991e81d7b328",
+            "title": "Silogismo Disjuntivo",
+            "description": "O que caracteriza um silogismo disjuntivo?",
+            "createdAt": "2023-12-20T10:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "ec39a7c2-2a0a-4935-bb58-5d268d331b92",
+                    "isCorrect": true,
+                    "content": "Pelo menos uma premissa é uma disjunção."
+                },
+                {
+                    "id": "e6e92720-1d84-4fe5-b8e1-7c3a52331a2e",
+                    "isCorrect": false,
+                    "content": "Não possui conclusão."
+                },
+                {
+                    "id": "1e2b7d64-e4c4-4c3e-8a1d-601b76966e45",
+                    "isCorrect": false,
+                    "content": "Sempre possui três premissas."
+                },
+                {
+                    "id": "c9c54a58-872a-4e84-b60c-62e51342c2da",
+                    "isCorrect": false,
+                    "content": "Sempre possui duas premissas."
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
+  },
+  {
+    "id": "8b05d6bd-0535-4a7e-a220-3b7aa7c13a08",
+    "title": "Variáveis",
+    "slug": "variaveis",
+    "content": "Variáveis: sentenças formais.",
+    "moduleId": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+    "createdAt": "2023-12-10T22:19:17.500Z",
+    "updatedAt": "2023-12-10T22:16:47.117Z",
+    "exercises": [
+      {
+          "id": "0c1bda32-20ee-4db5-8f3d-eccb0678f483",
+          "title": "Traduzindo Variáveis",
+          "description": "Indique o número de variáveis: choverá e não fará sol.",
+          "createdAt": "2023-12-10T22:37:27.463Z",
+          "alternatives": [
+              {
+                  "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
+                  "isCorrect": true,
+                  "content": "2"
+              },
+              {
+                  "id": "673965bc-cc26-4300-a1f5-8287124a4108",
+                  "isCorrect": false,
+                  "content": "1"
+              },
+              {
+                  "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+                  "isCorrect": true,
+                  "content": "4"
+              },
+              {
+                  "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
+                  "isCorrect": false,
+                  "content": "3"
+              }
+          ]
+      },
+      {
+          "id": "272cb73d-9dbe-4fe2-8360-abed0ebf2e0e",
+          "title": "Identificando Variáveis",
+          "description": "Qual notação está incorreta?",
+          "createdAt": "2023-12-10T22:31:01.326Z",
+          "alternatives": [
+              {
+                  "id": "4b11819c-e966-4f04-8eb0-851bb542e275",
+                  "isCorrect": false,
+                  "content": "PQ"
+              },
+              {
+                  "id": "673965bc-cc26-4300-a1f5-8287124a4108",
+                  "isCorrect": true,
+                  "content": "Q"
+              },
+              {
+                  "id": "4151e54b-8517-4871-a1d2-acfb67a8bf1a",
+                  "isCorrect": false,
+                  "content": "AAA"
+              },
+              {
+                  "id": "8e6b9ecd-e755-4e85-aee4-89eaac8f81cb",
+                  "isCorrect": false,
+                  "content": "3"
+              }
+          ]
+      },
+      {
+          "id": "3c8a7e56-ebfe-4b4d-8e88-7a482d84ab2b",
+          "title": "Contando Variáveis",
+          "description": "Quantas variáveis existem na expressão: 'A + B - C * D'?",
+          "createdAt": "2023-12-10T23:15:42.891Z",
+          "alternatives": [
+              {
+                  "id": "a89e57fc-b81e-4c62-95e3-062c5e9f6c63",
+                  "isCorrect": false,
+                  "content": "2"
+              },
+              {
+                  "id": "b3c9f349-1c9a-4d4a-94eb-1c03c7f1c0e0",
+                  "isCorrect": true,
+                  "content": "4"
+              },
+              {
+                  "id": "12a7dcb1-af0f-4289-b994-799fcdbebaaa",
+                  "isCorrect": false,
+                  "content": "3"
+              },
+              {
+                  "id": "9b9980bf-3035-4c3a-b44a-0b2c0b85f43c",
+                  "isCorrect": false,
+                  "content": "1"
+              }
+          ]
+      },
+      {
+          "id": "a66af32a-d5c5-4fb7-90b8-2e70e122d6e9",
+          "title": "Combinando Variáveis",
+          "description": "Quais variáveis estão presentes na expressão: 'X * Y + Z / W'?",
+          "createdAt": "2023-12-10T23:22:18.752Z",
+          "alternatives": [
+              {
+                  "id": "f1d378e5-480e-4a08-896f-b4081c6b58d4",
+                  "isCorrect": true,
+                  "content": "X, Y, Z, W"
+              },
+              {
+                  "id": "bc2e6db5-dae9-4f41-8d27-c98af4e7f9a4",
+                  "isCorrect": false,
+                  "content": "A, B, C, D"
+              },
+              {
+                  "id": "0e8d6479-0ee1-4d07-a787-9ee3a45672d2",
+                  "isCorrect": false,
+                  "content": "M, N, O, P"
+              },
+              {
+                  "id": "ac1fc07d-453c-4e41-8c69-23416b0f81dd",
+                  "isCorrect": false,
+                  "content": "1, 2, 3, 4"
+              }
+          ]
+      },
+      {
+          "id": "f7b743cb-d727-4b5f-849f-3e6284ef6513",
+          "title": "Avaliando Sentenças Lógicas",
+          "description": "A sentença lógica 'P ∧ Q' é verdadeira ou falsa?",
+          "createdAt": "2023-12-10T23:30:00.000Z",
+          "alternatives": [
+              {
+                  "id": "9fb27ea1-1271-4de9-84c9-69d31ff31cc8",
+                  "isCorrect": false,
+                  "content": "Verdadeira"
+              },
+              {
+                  "id": "ef210ef3-3e6a-4e24-9b8f-18dbf2d6ac86",
+                  "isCorrect": false,
+                  "content": "Falsa"
+              },
+              {
+                  "id": "71f65db9-5909-47b7-9619-05fe199ce754",
+                  "isCorrect": true,
+                  "content": "Não é possível determinar"
+              },
+              {
+                  "id": "457c641d-9382-4c99-8d68-145ee87e32b7",
+                  "isCorrect": false,
+                  "content": "Parcialmente Verdadeira"
+              }
+          ]
+      },
+      {
+          "id": "4f87c19f-9eab-4c0c-b5ec-167ba2b891fe",
+          "title": "Negando Sentenças Lógicas",
+          "description": "Qual é a negação de 'P ∨ Q'?",
+          "createdAt": "2023-12-10T23:37:45.215Z",
+          "alternatives": [
+              {
+                  "id": "f72b6e4f-2c09-4b11-9b6d-7341d460431b",
+                  "isCorrect": true,
+                  "content": "¬P ∧ ¬Q"
+              },
+              {
+                  "id": "d93e50b8-65ec-4025-8045-0f7178c8ee3f",
+                  "isCorrect": false,
+                  "content": "P ∧ Q"
+              },
+              {
+                  "id": "b45de80d-3f8b-4c2c-8810-8e833b0f4740",
+                  "isCorrect": false,
+                  "content": "¬(P ∨ Q)"
+              },
+              {
+                  "id": "27cf1f5a-5d87-4341-a1b7-54c28b91df65",
+                  "isCorrect": false,
+                  "content": "P ∨ Q"
+              }
+          ]
+      }
+    ]
+  },
+  {
+    "id": "8b05d6bd-0535-4a7e-a220-3b7aa7c13a09",
+    "title": "Operadores",
+    "slug": "operadores",
+    "content": "Operadores: os conectivos proposicionais.",
+    "moduleId": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+    "createdAt": "2023-12-10T22:19:17.500Z",
+    "updatedAt": "2023-12-10T22:16:47.117Z",
+    "exercises": [
+        {
+            "id": "48db8b05-2089-4d8d-890f-21750f6326cf",
+            "title": "Implicação",
+            "description": "A implicação lógica, representada por 'P → Q', é verdadeira a menos que a proposição P seja verdadeira e a proposição Q seja falsa.",
+            "createdAt": "2023-12-10T23:45:00.000Z",
+            "alternatives": [
+                {
+                    "id": "d0c7f8d9-0d45-4a1f-94db-2f12b041dfb2",
+                    "isCorrect": false,
+                    "content": "Verdadeira apenas quando P é verdadeira e Q é verdadeira."
+                },
+                {
+                    "id": "a4c2b017-b6c4-4d15-9c02-52563d7e7c77",
+                    "isCorrect": false,
+                    "content": "Falsa apenas quando P é falsa e Q é falsa."
+                },
+                {
+                    "id": "378f80d5-bdcd-4f37-b1dd-2182c2015259",
+                    "isCorrect": true,
+                    "content": "Verdadeira a menos que P seja verdadeira e Q seja falsa."
+                },
+                {
+                    "id": "d0b1c999-09da-4e8e-8d32-3b12f06c902b",
+                    "isCorrect": false,
+                    "content": "Falsa a menos que P seja falsa e Q seja verdadeira."
+                }
+            ]
+        },
+        {
+            "id": "b9ce1e34-1479-4fe5-af47-0a5564da1453",
+            "title": "Negação",
+            "description": "A negação lógica, representada por '¬P', é verdadeira se a proposição P for falsa e falsa se P for verdadeira.",
+            "createdAt": "2023-12-10T23:50:00.000Z",
+            "alternatives": [
+                {
+                    "id": "a793d090-82e9-44c0-8e72-7450012a63ad",
+                    "isCorrect": false,
+                    "content": "Verdadeira apenas quando P é verdadeira."
+                },
+                {
+                    "id": "f2fb2f24-72e9-4a68-a0cc-036a2b0a800f",
+                    "isCorrect": false,
+                    "content": "Falsa apenas quando P é falsa."
+                },
+                {
+                    "id": "45db5df7-3d7d-48bf-9173-19b3d89edcfb",
+                    "isCorrect": true,
+                    "content": "Verdadeira se P for falsa e falsa se P for verdadeira."
+                },
+                {
+                    "id": "d03c25d8-0a6b-44f9-a281-75ac12354cf8",
+                    "isCorrect": false,
+                    "content": "Falsa se P for falsa e verdadeira se P for verdadeira."
+                }
+            ]
+        },
+        {
+            "id": "2e53cf39-0a0b-4f84-aa48-b2a8d4b187b1",
+            "title": "Conjunção",
+            "description": "A conjunção lógica, representada por 'P ∧ Q', é verdadeira apenas se ambas as proposições P e Q forem verdadeiras.",
+            "createdAt": "2023-12-10T23:55:00.000Z",
+            "alternatives": [
+                {
+                    "id": "8b6869bf-6c95-4f0c-a42a-97718d9656b4",
+                    "isCorrect": false,
+                    "content": "Verdadeira apenas quando P é verdadeira e Q é verdadeira."
+                },
+                {
+                    "id": "0e9b29d0-3e6a-4f3d-9f74-5f2a15f74bb6",
+                    "isCorrect": true,
+                    "content": "Falsa se pelo menos uma das proposições P ou Q for falsa."
+                },
+                {
+                    "id": "c0a2a932-3e8e-4619-a3f4-8e20d076723b",
+                    "isCorrect": false,
+                    "content": "Falsa apenas quando P é falsa e Q é falsa."
+                },
+                {
+                    "id": "bd2de31e-2e3d-44aa-a677-e9503b0c7126",
+                    "isCorrect": false,
+                    "content": "Verdadeira se pelo menos uma das proposições P ou Q for verdadeira."
+                }
+            ]
+        },
+        {
+            "id": "f67cfb5c-c2a7-4a9e-9f2d-862594b79315",
+            "title": "Disjunção",
+            "description": "A disjunção lógica, representada por 'P ∨ Q', é verdadeira se pelo menos uma das proposições P ou Q for verdadeira.",
+            "createdAt": "2023-12-11T00:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "7fb69e92-c6c0-460c-94c2-0acdb6a6d684",
+                    "isCorrect": true,
+                    "content": "Verdadeira apenas quando P é verdadeira e Q é verdadeira."
+                },
+                {
+                    "id": "1f1c00a0-cc7b-4a97-96f9-e62a78141fc5",
+                    "isCorrect": false,
+                    "content": "Falsa se pelo menos uma das proposições P ou Q for falsa."
+                },
+                {
+                    "id": "d5a03c6d-959d-4c0e-975a-3f3ef4d11e5f",
+                    "isCorrect": false,
+                    "content": "Falsa apenas quando P é falsa e Q é falsa."
+                },
+                {
+                    "id": "9f3b0590-744e-4f1d-96cb-2da1ac0d7b8b",
+                    "isCorrect": false,
+                    "content": "Verdadeira se pelo menos uma das proposições P ou Q for falsa."
+                }
+            ]
+        },
+        {
+            "id": "eafea01e-0a4a-4a18-a7ef-764c8b18e4c2",
+            "title": "Bi-Implicação",
+            "description": "A bi-implicação lógica, representada por 'P ↔ Q', é verdadeira se ambas as proposições P e Q tiverem o mesmo valor lógico (ambas verdadeiras ou ambas falsas).",
+            "createdAt": "2023-12-11T00:05:00.000Z",
+            "alternatives": [
+                {
+                    "id": "cc0bcfb4-8ff5-4e76-8ea3-92c7d3c24a4c",
+                    "isCorrect": true,
+                    "content": "Verdadeira apenas quando P e Q têm o mesmo valor lógico (ambas verdadeiras ou ambas falsas)."
+                },
+                {
+                    "id": "27a6181a-041d-491e-b362-f74f5462c11b",
+                    "isCorrect": false,
+                    "content": "Falsa se ambas as proposições P e Q tiverem o mesmo valor lógico."
+                },
+                {
+                    "id": "e4424b90-2f1a-4e9b-b5e3-7d4d4a9f30f4",
+                    "isCorrect": false,
+                    "content": "Verdadeira apenas quando P e Q têm valores lógicos opostos."
+                },
+                {
+                    "id": "2f3f9a34-2760-4880-a1f5-6c297af9c157",
+                    "isCorrect": false,
+                    "content": "Falsa se P e Q tiverem valores lógicos opostos."
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "8b05d6bd-0535-4a7e-a220-3b7aa7c13a10",
+    "title": "Semântica",
+    "slug": "semantica",
+    "content": "Semântica: valor-verdade.",
+    "moduleId": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+    "createdAt": "2023-12-10T22:19:17.500Z",
+    "updatedAt": "2023-12-10T22:16:47.117Z",
+    "exercises": [
+        {
+            "id": "a7c16f99-6c4f-4103-af08-89bb07a5e7f9",
+            "title": "Avaliando Valor-Verdade",
+            "description": "Considere as proposições P: 'O céu é azul' e Q: 'A Terra é plana'. Avalie a verdade das seguintes expressões: \n1. P ∧ Q\n2. P ∨ Q\n3. ¬P\n4. P → Q",
+            "createdAt": "2023-12-11T12:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "cebe271d-2b78-47f1-bcf5-0d984cb3bb79",
+                    "isCorrect": false,
+                    "content": "1. Falso, 2. Verdadeiro, 3. Verdadeiro, 4. Falso"
+                },
+                {
+                    "id": "6c2862b5-8483-4f01-9de2-d7bce383cc36",
+                    "isCorrect": false,
+                    "content": "1. Verdadeiro, 2. Falso, 3. Verdadeiro, 4. Verdadeiro"
+                },
+                {
+                    "id": "4286dca2-987d-4d84-8e56-53ec36f889b2",
+                    "isCorrect": true,
+                    "content": "1. Falso, 2. Verdadeiro, 3. Falso, 4. Falso"
+                },
+                {
+                    "id": "fd525c5d-54df-477a-9b6b-b3d47c94a0b2",
+                    "isCorrect": false,
+                    "content": "1. Verdadeiro, 2. Verdadeiro, 3. Verdadeiro, 4. Falso"
+                }
+            ]
+        },
+        {
+            "id": "cc5361e9-b1ef-45db-9c2e-c96719d0a6e1",
+            "title": "Expressões Complexas",
+            "description": "Dada a proposição P: 'Eu estudo lógica' e Q: 'Eu passo em todas as provas', avalie a verdade da expressão: '(P ∧ Q) ∨ (¬P ∧ Q)'",
+            "createdAt": "2023-12-11T12:15:00.000Z",
+            "alternatives": [
+                {
+                    "id": "d2246fcf-600d-41a7-9f9b-7038725c47d8",
+                    "isCorrect": true,
+                    "content": "Verdadeiro"
+                },
+                {
+                    "id": "dd6bb176-2dbd-44b9-a5d9-cd9f2b74d0ad",
+                    "isCorrect": false,
+                    "content": "Falso"
+                },
+                {
+                    "id": "4e07605e-49ef-4ae5-9d63-0ad140d74e08",
+                    "isCorrect": false,
+                    "content": "Não é possível determinar"
+                },
+                {
+                    "id": "55a5fe4c-27b7-4ba1-8ef2-7c187da20c07",
+                    "isCorrect": false,
+                    "content": "Verdadeiro apenas se P for verdadeiro"
+                }
+            ]
+        },
+        {
+            "id": "51e0b9c5-5153-4de8-914d-95908ad7434e",
+            "title": "Condicional com Negação",
+            "description": "Dada a proposição P: 'Eu trabalho duro' e Q: 'Eu tenho sucesso', avalie a verdade da expressão: '¬P → Q'.",
+            "createdAt": "2023-12-11T12:30:00.000Z",
+            "alternatives": [
+                {
+                    "id": "53f6f331-1403-4816-92df-0eef49941f7a",
+                    "isCorrect": false,
+                    "content": "Verdadeiro"
+                },
+                {
+                    "id": "8f55f37c-f07b-49bf-a3f3-d4be5b38de1e",
+                    "isCorrect": true,
+                    "content": "Falso"
+                },
+                {
+                    "id": "a0884b4a-14ac-48fc-9aa5-44c24b6a794d",
+                    "isCorrect": false,
+                    "content": "Não é possível determinar"
+                },
+                {
+                    "id": "153a52f2-fdc7-4d49-86f8-169524c4e831",
+                    "isCorrect": false,
+                    "content": "Falso apenas se P for falso"
+                }
+            ]
+        },
+        {
+            "id": "bb70c902-33da-49b3-9a37-3f8ba0e96ce9",
+            "title": "Dupla Negação",
+            "description": "Dada a proposição P: 'O inverno é frio', avalie a verdade da expressão: '¬(¬P)'",
+            "createdAt": "2023-12-11T12:45:00.000Z",
+            "alternatives": [
+                {
+                    "id": "346ac14a-d648-4b1e-8e2a-fba1f45169c1",
+                    "isCorrect": true,
+                    "content": "Verdadeiro"
+                },
+                {
+                    "id": "ccda9c82-2a7c-41f8-88fc-f22e63c72e7e",
+                    "isCorrect": false,
+                    "content": "Falso"
+                },
+                {
+                    "id": "ff11a22d-6c45-49e4-9076-d06e72670242",
+                    "isCorrect": false,
+                    "content": "Não é possível determinar"
+                },
+                {
+                    "id": "d25b2e48-2822-45c4-a7a2-34ecfb56cb98",
+                    "isCorrect": false,
+                    "content": "Verdadeiro apenas se P for falso"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "8b05d6bd-0535-4a7e-a220-3b7aa7c13a11",
+    "title": "Sintaxe",
+    "slug": "sintaxe",
+    "content": "Sintaxe: regras de inferência.",
+    "moduleId": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+    "createdAt": "2023-12-10T22:19:17.500Z",
+    "updatedAt": "2023-12-10T22:16:47.117Z",
+    "exercises": [
+        {
+            "id": "9a5c784f-3d22-4b45-8659-1ef33c77e49b",
+            "title": "Modus Ponens",
+            "description": "Dadas as proposições P → Q e P, aplique a regra de inferência Modus Ponens para concluir:",
+            "createdAt": "2023-12-12T09:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "07e4febc-4b2f-4f42-8743-c2e37757c27c",
+                    "isCorrect": true,
+                    "content": "Q"
+                },
+                {
+                    "id": "aa3f48de-826d-4911-b8ec-8e21d147e381",
+                    "isCorrect": false,
+                    "content": "P"
+                },
+                {
+                    "id": "ecb6185e-8fc1-4bf2-b74e-dc67dd6ac78f",
+                    "isCorrect": false,
+                    "content": "P ∧ Q"
+                },
+                {
+                    "id": "e8a73a8d-9da0-4ea2-aa41-19a546b1c6b8",
+                    "isCorrect": false,
+                    "content": "¬P"
+                }
+            ]
+        },
+        {
+            "id": "8890e94b-2059-461a-8ae5-9b61da3fe853",
+            "title": "Modus Tollens",
+            "description": "Dadas as proposições P → Q e ¬Q, aplique a regra de inferência Modus Tollens para concluir:",
+            "createdAt": "2023-12-12T09:15:00.000Z",
+            "alternatives": [
+                {
+                    "id": "f3b8f4b1-6012-4e39-b58e-07c582161f89",
+                    "isCorrect": true,
+                    "content": "¬P"
+                },
+                {
+                    "id": "93680f5e-8b65-4e89-915a-b7a0cf74238b",
+                    "isCorrect": false,
+                    "content": "P"
+                },
+                {
+                    "id": "5cb1f93d-6dd9-4cc1-8da0-800e2eaa694b",
+                    "isCorrect": false,
+                    "content": "Q"
+                },
+                {
+                    "id": "2dbd810a-8d4a-4e4a-91a1-14772baf1e79",
+                    "isCorrect": false,
+                    "content": "P ∧ Q"
+                }
+            ]
+        },
+        {
+            "id": "fdfbcf11-7e94-446a-9872-c794497f4d2d",
+            "title": "Silogismo Hipotético",
+            "description": "Dadas as proposições P → Q e Q → R, aplique a regra de inferência Silogismo Hipotético para concluir:",
+            "createdAt": "2023-12-12T09:30:00.000Z",
+            "alternatives": [
+                {
+                    "id": "e4a570c5-0327-43f9-9866-1febe8a16be2",
+                    "isCorrect": true,
+                    "content": "P → R"
+                },
+                {
+                    "id": "9ef3548b-9539-4e62-9c7f-8722ff4f0491",
+                    "isCorrect": false,
+                    "content": "¬P"
+                },
+                {
+                    "id": "d376c0ab-bc6c-4a5b-a5a9-65b9304e697b",
+                    "isCorrect": false,
+                    "content": "R → P"
+                },
+                {
+                    "id": "d2a408db-7d6a-4b63-814b-b754b1ea4fb1",
+                    "isCorrect": false,
+                    "content": "P ∧ Q"
+                }
+            ]
+        },
+        {
+            "id": "e7efde4f-05c9-4c48-8d91-3f3361c0d3c1",
+            "title": "Conjunção Simples",
+            "description": "Dadas as proposições P e Q, aplique a regra de inferência Conjunção Simples para concluir:",
+            "createdAt": "2023-12-12T09:45:00.000Z",
+            "alternatives": [
+                {
+                    "id": "e0b5f1f5-1a4c-4ab6-b8a7-e3aaf128cc4d",
+                    "isCorrect": true,
+                    "content": "P ∧ Q"
+                },
+                {
+                    "id": "5db13d96-f0d1-471c-bdf2-19b5c7a3a7b8",
+                    "isCorrect": false,
+                    "content": "P ∨ Q"
+                },
+                {
+                    "id": "6f2df647-01df-4a0a-8485-bc75a7d6c369",
+                    "isCorrect": false,
+                    "content": "¬P"
+                },
+                {
+                    "id": "5f29c29b-9967-43f7-b18e-49c2ef92a56f",
+                    "isCorrect": false,
+                    "content": "Q"
+                }
+            ]
+        },
+        {
+            "id": "70e4a0b0-e8e3-4c44-a285-d5ad51ea184f",
+            "title": "Simplicação",
+            "description": "Dadas as proposições P e Q, aplique a regra de inferência Simplicação para concluir:",
+            "createdAt": "2023-12-12T10:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "a2e3b0e5-4b35-431d-8c5d-94a2fc25fe5a",
+                    "isCorrect": true,
+                    "content": "P → Q"
+                },
+                {
+                    "id": "e6e3aacc-c44a-4f9a-b06b-2c303f3b15a5",
+                    "isCorrect": false,
+                    "content": "Q → P"
+                },
+                {
+                    "id": "788bbdbf-8c38-4da5-88b9-c5332714e00a",
+                    "isCorrect": false,
+                    "content": "P ∧ Q"
+                },
+                {
+                    "id": "3207aa33-82f7-48d4-810e-bbe6b7b57c91",
+                    "isCorrect": false,
+                    "content": "¬P"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "8b05d6bd-0535-4a7e-a220-3b7aa7c13a15",
+    "title": "Teoremas",
+    "slug": "teoremas",
+    "content": "Teoremas: quais são os teoremas da Lógica Proposicional?",
+    "moduleId": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+    "createdAt": "2023-12-10T22:19:17.500Z",
+    "updatedAt": "2023-12-10T22:16:47.117Z",
+    "exercises": [
+        {
+            "id": "bf94de20-b59d-4f87-9765-23a7b9940595",
+            "title": "Teorema da Identidade",
+            "description": "Qual é o teorema que afirma que uma proposição é equivalente a ela mesma?",
+            "createdAt": "2023-12-13T09:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "bfb38b99-1d9f-493f-8b31-222d6b5becc3",
+                    "isCorrect": true,
+                    "content": "Lei da Identidade"
+                },
+                {
+                    "id": "590fa187-83e3-4aa1-ae6f-9b0d61e55f9d",
+                    "isCorrect": false,
+                    "content": "Teorema da Negação"
+                },
+                {
+                    "id": "f8a43a7b-959a-47df-b536-71d1f890f7de",
+                    "isCorrect": false,
+                    "content": "Lei da Exclusão"
+                },
+                {
+                    "id": "ee529735-5b45-4d67-8349-fffd1c3a7f7e",
+                    "isCorrect": false,
+                    "content": "Teorema da Conjunção"
+                }
+            ]
+        },
+        {
+            "id": "d1a6d103-c6f4-4873-bd06-1306e482ad0d",
+            "title": "Teorema da Negação Dupla",
+            "description": "Qual é o teorema que afirma que a negação da negação de uma proposição P é equivalente a P?",
+            "createdAt": "2023-12-13T09:15:00.000Z",
+            "alternatives": [
+                {
+                    "id": "fe5f6c11-1e47-4591-bd39-b3de04b09895",
+                    "isCorrect": true,
+                    "content": "Lei da Negação Dupla"
+                },
+                {
+                    "id": "6d0a6c79-7aa4-48cf-a031-0d86f42a1f49",
+                    "isCorrect": false,
+                    "content": "Teorema da Conjunção"
+                },
+                {
+                    "id": "da974d49-6bbd-4e0c-ba3c-6958964c02dd",
+                    "isCorrect": false,
+                    "content": "Lei da Identidade"
+                },
+                {
+                    "id": "44d4a04d-2c1c-4bf0-8313-20d4d05d7ff2",
+                    "isCorrect": false,
+                    "content": "Teorema da Implicação"
+                }
+            ]
+        },
+        {
+            "id": "ad75c6a5-eae3-468d-9cb7-24a6a5010c76",
+            "title": "Teorema da Dupla Implicação",
+            "description": "Qual é o teorema que afirma que uma proposição P é verdadeira se e somente se sua negação é falsa?",
+            "createdAt": "2023-12-13T09:30:00.000Z",
+            "alternatives": [
+                {
+                    "id": "8e2d9545-7f2e-4d9e-a5f7-5fcdb99a0a67",
+                    "isCorrect": true,
+                    "content": "Lei da Dupla Implicação"
+                },
+                {
+                    "id": "636f169f-c7a4-41b0-b48d-240a50b9d597",
+                    "isCorrect": false,
+                    "content": "Teorema da Disjunção"
+                },
+                {
+                    "id": "7af6a7d8-e06e-4b2d-9271-67c15a8f80b1",
+                    "isCorrect": false,
+                    "content": "Lei da Exclusão"
+                },
+                {
+                    "id": "7e5d1d2a-4572-4b7b-b9b2-244fa64b178b",
+                    "isCorrect": false,
+                    "content": "Teorema da Negação"
+                }
+            ]
+        },
+        {
+            "id": "f7a8a5f5-8fbf-42d5-99ac-cf69d8fe81a4",
+            "title": "Teorema da Contraposição",
+            "description": "Qual é o teorema que afirma que a contraposição de uma implicação é logicamente equivalente à sua forma contrapositiva?",
+            "createdAt": "2023-12-13T09:45:00.000Z",
+            "alternatives": [
+                {
+                    "id": "3cde2285-08ec-4759-816d-19b30e9c2e2a",
+                    "isCorrect": true,
+                    "content": "Lei da Contraposição"
+                },
+                {
+                    "id": "a9d48757-5a3c-4f6b-a42c-609e1d8c88b5",
+                    "isCorrect": false,
+                    "content": "Teorema da Exclusão"
+                },
+                {
+                    "id": "3cde2285-08ec-4759-816d-19b30e9c2e2a",
+                    "isCorrect": false,
+                    "content": "Lei da Identidade"
+                },
+                {
+                    "id": "36a170d7-2f64-42ce-9159-d7f038f787ec",
+                    "isCorrect": false,
+                    "content": "Teorema da Negação"
+                }
+            ]
+        },
+        {
+            "id": "b246d6ac-204e-43eb-b0a5-246450c5d13b",
+            "title": "Teorema da Exportação",
+            "description": "Qual é o teorema que afirma que se P implica Q, então 'P → Q' é logicamente equivalente a '¬P ∨ Q'?",
+            "createdAt": "2023-12-13T10:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "fb5e8a89-1f03-42c1-8dcb-aa7689055863",
+                    "isCorrect": true,
+                    "content": "Lei da Exportação"
+                },
+                {
+                    "id": "db80ee17-7963-4f6a-81db-6e4e021e0a83",
+                    "isCorrect": false,
+                    "content": "Teorema da Conjunção"
+                },
+                {
+                    "id": "b11c3a04-eb4a-4b09-a779-76c35e192c04",
+                    "isCorrect": false,
+                    "content": "Lei da Negação Dupla"
+                },
+                {
+                    "id": "3a9c63a4-2b9b-4938-a10a-2dcd22c89f15",
+                    "isCorrect": false,
+                    "content": "Teorema da Identidade"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "id": "8b05d6bd-0535-4a7e-a220-3b7aa7c13a99",
+    "title": "Axiomas",
+    "slug": "axiomas",
+    "content": "Principais Axiomas da Lógica Proposicional",
+    "moduleId": "af0f6b40-d98d-4a77-a1a1-3fdfff114511",
+    "createdAt": "2023-12-10T22:19:17.500Z",
+    "updatedAt": "2023-12-10T22:16:47.117Z",
+    "exercises": [
+        {
+            "id": "ea66a3aa-d4b1-4d48-a7b9-bd5ec4ea00f2",
+            "title": "Axioma da Identidade",
+            "description": "Qual é o axioma que afirma que uma proposição é equivalente a ela mesma?",
+            "createdAt": "2023-12-14T09:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "8ff30c5a-0ad7-4f5a-96a3-168d1f3c2443",
+                    "isCorrect": true,
+                    "content": "Lei da Identidade"
+                },
+                {
+                    "id": "551f93b9-7e0d-4ab6-91da-102f991cf1e7",
+                    "isCorrect": false,
+                    "content": "Axioma da Negação Dupla"
+                },
+                {
+                    "id": "2c54e9a7-7dd3-40b4-b0c7-b8d3838f93b3",
+                    "isCorrect": false,
+                    "content": "Lei da Exclusão"
+                },
+                {
+                    "id": "0f334497-7aa9-417a-920a-2e8a97d43884",
+                    "isCorrect": false,
+                    "content": "Axioma da Conjunção"
+                }
+            ]
+        },
+        {
+            "id": "4f80cd6f-0bb4-46f8-8c8a-0bb4a5016820",
+            "title": "Axioma da Negação Dupla",
+            "description": "Qual é o axioma que afirma que a negação da negação de uma proposição P é equivalente a P?",
+            "createdAt": "2023-12-14T09:15:00.000Z",
+            "alternatives": [
+                {
+                    "id": "ee464c2a-1c88-45b3-8bb2-2cd4b906d222",
+                    "isCorrect": true,
+                    "content": "Lei da Negação Dupla"
+                },
+                {
+                    "id": "4e1458c3-559b-4c7e-918d-89dd31f10d8b",
+                    "isCorrect": false,
+                    "content": "Axioma da Conjunção"
+                },
+                {
+                    "id": "11f43322-b963-46f3-9e18-8f36ef8660c1",
+                    "isCorrect": false,
+                    "content": "Lei da Identidade"
+                },
+                {
+                    "id": "2a5e19f1-ef07-4812-81c7-52c9302ef4a0",
+                    "isCorrect": false,
+                    "content": "Axioma da Implicação"
+                }
+            ]
+        },
+        {
+            "id": "c9b2b3a1-2d8b-4297-a236-8f09e8cc0d10",
+            "title": "Axioma da Dupla Implicação",
+            "description": "Qual é o axioma que afirma que uma proposição P é verdadeira se e somente se sua negação é falsa?",
+            "createdAt": "2023-12-14T09:30:00.000Z",
+            "alternatives": [
+                {
+                    "id": "3b13a1a7-8d01-4927-929f-5de188c567a0",
+                    "isCorrect": true,
+                    "content": "Lei da Dupla Implicação"
+                },
+                {
+                    "id": "a9bdc9bf-9c2a-45d3-ba57-853174a21f04",
+                    "isCorrect": false,
+                    "content": "Axioma da Disjunção"
+                },
+                {
+                    "id": "30fb646b-47d7-4ec3-b9e1-c2d7360e5bce",
+                    "isCorrect": false,
+                    "content": "Lei da Exclusão"
+                },
+                {
+                    "id": "5369e5a8-84d3-45f1-99e5-11e6b8dd7b04",
+                    "isCorrect": false,
+                    "content": "Axioma da Negação"
+                }
+            ]
+        },
+        {
+            "id": "051efbb1-e14f-4b09-b8e9-14c9171e07b2",
+            "title": "Axioma da Contraposição",
+            "description": "Qual é o axioma que afirma que a contraposição de uma implicação é logicamente equivalente à sua forma contrapositiva?",
+            "createdAt": "2023-12-14T09:45:00.000Z",
+            "alternatives": [
+                {
+                    "id": "b235d6c5-1a57-4f77-b8a2-2da69db96f6b",
+                    "isCorrect": true,
+                    "content": "Lei da Contraposição"
+                },
+                {
+                    "id": "1d4728e7-d388-4e89-af10-c53da172f439",
+                    "isCorrect": false,
+                    "content": "Axioma da Exclusão"
+                },
+                {
+                    "id": "b235d6c5-1a57-4f77-b8a2-2da69db96f6b",
+                    "isCorrect": false,
+                    "content": "Lei da Identidade"
+                },
+                {
+                    "id": "3b2af3d4-8f7c-4009-94d7-4b837e73fdd4",
+                    "isCorrect": false,
+                    "content": "Axioma da Negação"
+                }
+            ]
+        },
+        {
+            "id": "1ec95de2-b2f3-49d3-b1cd-217c3fbffdb4",
+            "title": "Axioma da Exportação",
+            "description": "Qual é o axioma que afirma que se P implica Q, então 'P → Q' é logicamente equivalente a '¬P ∨ Q'?",
+            "createdAt": "2023-12-14T10:00:00.000Z",
+            "alternatives": [
+                {
+                    "id": "58ac19b2-8f68-4682-a2f2-c5a08a1a00e3",
+                    "isCorrect": true,
+                    "content": "Lei da Exportação"
+                },
+                {
+                    "id": "77d73ee6-ded9-452e-9a12-03c9b564f41c",
+                    "isCorrect": false,
+                    "content": "Axioma da Conjunção"
+                },
+                {
+                    "id": "59a5ebeb-cdba-4c4e-b78a-2b67d11d2553",
+                    "isCorrect": false,
+                    "content": "Lei da Negação Dupla"
+                },
+                {
+                    "id": "88de86e0-45ee-457e-a78f-9050178c76e2",
+                    "isCorrect": false,
+                    "content": "Axioma da Identidade"
+                }
+            ]
+        }
+    ]
+}
+
+]

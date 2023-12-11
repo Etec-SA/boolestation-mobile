@@ -1,4 +1,4 @@
-//import { MMKV } from "react-native-mmkv";
+import { MMKV } from "react-native-mmkv";
 
 interface LessonStatus {
   [exerciseId: string]: boolean;
@@ -19,7 +19,7 @@ interface ExercisesStatus {
 }
 
 export class CacheClient {
-  private readonly storage: any = null;
+  private readonly storage = new MMKV();
 
   private initializeExercisesStatus() {
     const exercisesStatus = this.getItem<ExercisesStatus>('exercisesStatus');
@@ -47,7 +47,8 @@ export class CacheClient {
 
   getItem<T>(key: string): T | null {
     try {
-      const data = JSON.parse(this.storage.getString(key)!);
+      const stringValue = this.storage.getString(key) || '';
+      const data = JSON.parse(stringValue);
 
       if (!data) {
         this.saveItem(key, '');
@@ -110,6 +111,19 @@ export class CacheClient {
 
       lessonsStatus[lessonId] = lessonsStatus[lessonId] || {};
       lessonsStatus[lessonId][exerciseId] = value;
+
+      this.saveItem('lessonsStatus', lessonsStatus);
+    } catch (error) {
+      console.error('Error inserting lesson status:', error);
+    }
+  }
+
+  deleteLessonStatus(lessonId: string, exerciseId: string) {
+    try {
+      const lessonsStatus = this.initializeLessonsStatus();
+
+      lessonsStatus[lessonId] = lessonsStatus[lessonId] || {};
+      delete lessonsStatus[lessonId][exerciseId];
 
       this.saveItem('lessonsStatus', lessonsStatus);
     } catch (error) {

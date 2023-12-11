@@ -15,7 +15,7 @@ const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['ex
   
   useEffect(()=>{
     const item = cache.getItem('exercisesStatus');
-    setCachedData(item);
+    setCachedData(item || {});
   }, [data]);
 
     return(
@@ -42,28 +42,12 @@ const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['ex
                   <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">                   
                     <Text className="text-gray-500 text-xl">{exercise.title}</Text>
                     { cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="check" color="black" size={25} /> : null }
-                    { !cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="close" color="black" size={25} /> : null }
+                    { cachedData[exercise.id]?.lastAttemptIsCorrect === false ? <MaterialCommunityIcons name="close" color="black" size={25} /> : null }
                   </View>
                 </TouchableOpacity>
               )
             })
-          }
-
-            <TouchableOpacity className="w-full">
-              <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">
-                <Text className="text-gray-500 text-xl">Justificação de Silogismos</Text>
-              </View>
-            </TouchableOpacity>                 
-
-            <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#165724] rounded shadow-md">
-                <Text className="text-[#d4edda] text-xl">Justificação de Silogismos</Text>
-                <MaterialCommunityIcons name="check" color="#d4edda" size={20} />
-            </View>
-
-            <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#942e30] rounded shadow-md">
-                <Text className="text-[#f8d7da] text-xl">Valorização de Silogismos</Text>
-                <MaterialCommunityIcons name="close" color="#f8d7da" size={20} />
-            </View>                    
+          }                  
         </Animated.View>
     )
 }

@@ -30,6 +30,7 @@ const Lessons = ({ data, onClick, changePage }: { data: typeof lessonsMock, onCl
           {
             data.map((lesson, index) => (
               <LessonBox
+                id={lesson.id}
                 key={lesson.id}
                 title={lesson.title}
                 description={lesson.content}
