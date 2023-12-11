@@ -14,6 +14,7 @@ const Lessons = ({ data, onClick, changePage }: { data: typeof lessonsMock, onCl
 
   const renderItem = ({ item }: { item: any }) => (
     <LessonBox
+      id={item.id}
       key={item.id}
       title={item.title}
       description={item.content}
@@ -25,8 +26,8 @@ const Lessons = ({ data, onClick, changePage }: { data: typeof lessonsMock, onCl
   );
 
   return (
-    <Animated.View
-      style={styles.header}
+    <Animated.ScrollView
+      contentContainerStyle={styles.scrollViewContent}
       entering={FadeIn.duration(200)}
       exiting={FadeOutLeft.duration(200)}
     >
@@ -47,7 +48,7 @@ const Lessons = ({ data, onClick, changePage }: { data: typeof lessonsMock, onCl
           nestedScrollEnabled={true}
         />
       </View>
-    </Animated.View>
+    </Animated.ScrollView>
   );
 }
 
@@ -72,6 +73,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#f0f0f0', 
     paddingHorizontal: 18,
     paddingTop: 45
+  },
+  scrollViewContent:{
+    flex: 1, 
+    justifyContent: 'flex-start', 
+    alignItems: 'center', 
+    backgroundColor: '#f0f0f0', 
+    paddingHorizontal: 18,
+    paddingTop: 40
   }
 });
 

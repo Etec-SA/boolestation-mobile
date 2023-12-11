@@ -29,15 +29,15 @@ const Home = () => {
 
   useEffect(() => {
     const data = lessonsMock.filter(lesson => lesson.id === lessonId);
-    const theoryData = traditionalContent.filter(content => content.lessonId === lessonId)[0];
-    setTheory(theoryData);
+    let theoryData = traditionalContent.filter(content => content.lessonId === lessonId)[0];
+    setTheory(theoryData || {lessonId, source: {html: ``}});
     setExercises(data[0]?.exercises || []);
   }, [lessonId]);
 
   useEffect(()=>{
     if(!exerciseId) return;
-    let actualExercise = lessons[0]?.exercises.filter((exercise: { id: string; })=> exercise.id === exerciseId)[0];
-
+    let actualLesson = lessons.filter(lesson=> lesson.id === lessonId);
+    let actualExercise = actualLesson[0].exercises.filter((exercise: { id: string; })=> exercise.id === exerciseId)[0];
     const alternatives = actualExercise.alternatives.map((alternative: { isCorrect: any; content: any; })=>{
       const {isCorrect, content } = alternative;
       return {

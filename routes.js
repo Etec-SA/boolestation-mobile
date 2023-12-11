@@ -39,7 +39,7 @@ export const Routes = () => {
                 }}
             />
 
-            <Tab.Screen name='Ranking' component={Forms} options={{
+            <Tab.Screen name='Ranking' component={Ranking} options={{
                 headerShown: false,
                 tabBarIcon: ({ size, color }) => (
                     <View>

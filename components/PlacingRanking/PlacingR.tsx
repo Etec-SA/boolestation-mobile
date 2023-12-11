@@ -14,7 +14,7 @@ const PlacingR = () => {
                 <Text className="text-[#DAA520] font-bold text-lg">1</Text>
             </View>
             <View className="w-3/5 p-2">
-                <Text className="text-[#DAA520] font-bold text-lg">Giovanna Nunes</Text>
+                <Text className="text-[#DAA520] font-bold text-lg">Aristóteles</Text>
             </View>
             <View className="w-1/4 flex justify-center items-center flex-row gap-2 p-2">
                 <Ionicons name='trophy' size={30} color={'#DAA520'} />

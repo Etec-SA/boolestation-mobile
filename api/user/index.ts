@@ -22,6 +22,11 @@ export async function signUp(user: CreateUserDTO){
       },
       body: JSON.stringify(user),
     });
+
+    if(response.status !== 201){
+      return false;
+    }
+
     const data = await response.json();
     return data;
   }catch(e){
@@ -38,6 +43,9 @@ export async function authenticate(user: AuthenticateDTO){
       },
       body: JSON.stringify(user),
     });
+
+    if(response.status != 200) return false;
+
     const data = await response.json();
     return data;
   }catch(e){

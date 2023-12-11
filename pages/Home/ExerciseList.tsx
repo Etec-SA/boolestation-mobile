@@ -11,6 +11,12 @@ NativeWindStyleSheet.setOutput({
   });
 
 const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['exercises'], onClick: any, changePage: any}) => {
+  const [cachedData, setCachedData] = useState<any>({});
+  
+  useEffect(()=>{
+    const item = cache.getItem('exercisesStatus');
+    setCachedData(item || {});
+  }, [data]);
 
     return(
         <Animated.ScrollView
@@ -35,12 +41,14 @@ const Exercises = ({data, onClick, changePage}: {data: typeof lessonsMock[0]['ex
                 <TouchableOpacity className="w-full" onPress={()=> {onClick(exercise.id)}} key={exercise.id}>
                   <View className="p-4 flex-row justify-between items-center w-full mb-4 bg-[#fff] rounded shadow-md">                   
                     <Text className="text-gray-500 text-xl">{exercise.title}</Text>
+                    { cachedData[exercise.id]?.lastAttemptIsCorrect ? <MaterialCommunityIcons name="check" color="black" size={25} /> : null }
+                    { cachedData[exercise.id]?.lastAttemptIsCorrect === false ? <MaterialCommunityIcons name="close" color="black" size={25} /> : null }
                   </View>
                 </TouchableOpacity>
               )
             })
-          }             
-      </Animated.ScrollView>
+          }                
+        </Animated.ScrollView>
     )
 }
 

@@ -17,6 +17,7 @@ import { NativeWindStyleSheet } from "nativewind";
 import Button from "../../components/FormComponents/Button";
 import Input from "../../components/FormComponents/Input";
 import Link from "../../components/FormComponents/Link";
+import cache from "../../cache";
 
 NativeWindStyleSheet.setOutput({
   default: "native",
@@ -24,7 +25,7 @@ NativeWindStyleSheet.setOutput({
 
 type RegisterData = {};
 
-const SignForm = ({ changePage }: { changePage: any }) => {
+const SignForm = ({ changePage, redirectToMain }: { changePage: any, redirectToMain: any}) => {
   const [loading, setIsLoading] = useState(false);
   const {
     control,
@@ -42,11 +43,22 @@ const SignForm = ({ changePage }: { changePage: any }) => {
       name: username,
       birthdate: "2000-01-01",
     });
+
     const auth = await authenticate({ email, password });
-    await AsyncStorage.setItem("token", auth.access_token);
+
+    if(!auth){
+      setIsLoading(false);
+      alert('Algo de errado aconteceu ao registrar sua conta.');
+      return;
+    }
+
+    cache.saveItem("token", auth.access_token);
+
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
+
+    redirectToMain('Routes');
   }
 
   return (

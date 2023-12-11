@@ -11,8 +11,8 @@ NativeWindStyleSheet.setOutput({
 const EditProfile = () => {
   const { control, handleSubmit, formState: { errors } } = useForm({})
 
-  function handleSignIn() {  //data
-      console.log();  //data
+  function handleSignIn() {
+      console.log();
   }
 
   return(

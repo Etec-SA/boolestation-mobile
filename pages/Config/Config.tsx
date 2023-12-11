@@ -10,10 +10,9 @@ NativeWindStyleSheet.setOutput({
 const Config = () => {
     return (
         <SafeAreaView className="flex-1 justify-start items-center bg-[#f0f0f0] pt-16">
-          <View className="w-full bg-[#000] p-4 rounded-3xl my-3 bg-[#fff] shadow-md">
-            <MaterialCommunityIcons name="exit-to-app" color="gray" size={30} />
-            <Text>Sair</Text>
-          </View>
+          <TouchableOpacity className="w-80 bg-red-500 p-4 rounded-3xl my-3 shadow-md text-center text-md" onPress={()=>{}}>
+            Sair
+          </TouchableOpacity>
         </SafeAreaView>
     )
 }
